@@ -13,7 +13,7 @@
 
       @Test
       void testAll() {
-          String apiHostServer = System.getenv().getOrDefault("API_HOST", http://localhost:8080);
+          String apiHostServer = System.getenv().getOrDefault("API_HOST", "https://virtserver.swaggerhub.com/061REB413/employee-service/0.1");
           Results results = Runner.path("classpath:org/springframework/boot/api_tests")
                   .systemProperty("url.base", apiHostServer)
                   .parallel(1);
