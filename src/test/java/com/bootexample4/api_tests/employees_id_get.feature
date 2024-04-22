@@ -12,10 +12,12 @@ Feature: Employee API
 
 Background:
   * def urlBase = karate.properties['url.base'] || karate.get('urlBase', 'http://localhost:8080')
-  * configure headers = { 'Authorization': 'Bearer ' + karate.properties['AUTH_TOKEN'] }
+  #* configure headers = { 'Authorization': 'Bearer ' + karate.properties['AUTH_TOKEN'] }
+  * def authToken = karate.properties['AUTH_TOKEN']
 
 Scenario: Get employee by ID
   Given url urlBase
+  And header Authorization = authToken
   And path '/employees/d290f1ee-6c54-4b01-90e6-d701748f0851'
   When method GET
   Then status 200
@@ -31,6 +33,7 @@ Scenario: Get employee by ID
 
 Scenario: Verify employee details
   Given url urlBase
+  And header Authorization = authToken
   And path '/employees/d290f1ee-6c54-4b01-90e6-d701748f0851'
   When method GET
   Then status 200
@@ -41,12 +44,14 @@ Scenario: Verify employee details
 
 Scenario: Get non-existent employee
   Given url urlBase
+  And header Authorization = authToken
   And path '/employees/non-existent-id'
   When method GET
   Then status 404
 
 Scenario Outline: Get employee by ID with examples
   Given url urlBase
+  And header Authorization = authToken
   And path '/employees/<id>'
   When method GET
   Then status <status>
