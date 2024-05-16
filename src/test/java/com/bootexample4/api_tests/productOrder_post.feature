@@ -13,7 +13,7 @@ Feature: Test /productOrder API endpoint
   Background:
     * def urlBase = karate.properties['url.base'] || karate.get('urlBase', 'http://localhost:8080')
     * url urlBase
-    * configure headers = { Authorization: '#(karate.properties['AUTH_TOKEN'])' }
+    #* configure headers = { Authorization: '#(karate.properties['AUTH_TOKEN'])' }
 
   Scenario Outline: Create a new order with valid request
     Given path '/productOrder'
