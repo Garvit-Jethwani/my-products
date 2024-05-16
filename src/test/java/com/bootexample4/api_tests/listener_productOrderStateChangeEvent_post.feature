@@ -92,7 +92,7 @@ Feature: State Change Event By Client
       """
       {
         "notification": {
-          "date": "2021-09-29T18:42:24.641-03:00",
+          "date": "2021-09-29T18:42:24-03:00",
           "customer": {
             "subscriberId": "234567654"
           },
@@ -116,7 +116,7 @@ Feature: State Change Event By Client
       """
       {
         "notification": {
-          "date": "2021-10-26T17:53:25.497-03:00",
+          "date": "2021-09-29T18:42:24-03:00",
           "customer": {
             "subscriberId": "234567654"
           },
@@ -146,7 +146,7 @@ Feature: State Change Event By Client
       """
       {
         "notification": {
-          "date": "2022-12-26T12:15:35.174-03:00",
+          "date": "2021-09-29T18:42:24-03:00",
           "customer": {
             "subscriberId": "234567654"
           },
