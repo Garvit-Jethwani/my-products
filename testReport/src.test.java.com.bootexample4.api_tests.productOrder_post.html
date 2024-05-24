@@ -1,0 +1,7718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"dff67213-8c4a-4c08-b372-ca1e6c215d89",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>src.test.java.com.bootexample4.api_tests.productOrder_post</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">8</div>
+      <div id="nav-fail" class="bg-danger">10</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2024-05-24 10:49:51 AM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1.1:84]"><span>[1.1:84]</span> <span>Create a new order with valid request body</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.2:84]"><span>[1.2:84]</span> <span>Create a new order with valid request body</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.3:84]"><span>[1.3:84]</span> <span>Create a new order with valid request body</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.4:84]"><span>[1.4:84]</span> <span>Create a new order with valid request body</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.5:84]"><span>[1.5:84]</span> <span>Create a new order with valid request body</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.6:84]"><span>[1.6:84]</span> <span>Create a new order with valid request body</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.7:84]"><span>[1.7:84]</span> <span>Create a new order with valid request body</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.8:84]"><span>[1.8:84]</span> <span>Create a new order with valid request body</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.1:150]"><span>[2.1:150]</span> <span>Create a new order with invalid request body</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.2:150]"><span>[2.2:150]</span> <span>Create a new order with invalid request body</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.3:150]"><span>[2.3:150]</span> <span>Create a new order with invalid request body</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.4:150]"><span>[2.4:150]</span> <span>Create a new order with invalid request body</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.5:150]"><span>[2.5:150]</span> <span>Create a new order with invalid request body</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.6:150]"><span>[2.6:150]</span> <span>Create a new order with invalid request body</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.7:150]"><span>[2.7:150]</span> <span>Create a new order with invalid request body</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.8:150]"><span>[2.8:150]</span> <span>Create a new order with invalid request body</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[3:152]"><span>[3:152]</span> <span>Create a new order with unauthorized request</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4:215]"><span>[4:215]</span> <span>Create a new order with exceeded quota</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/com/bootexample4/api_tests/productOrder_post.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Test /productOrder API Endpoint</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:84]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:84]</span>
+                <span class="scenario-name">Create a new order with valid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>111</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:84]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.21">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;9182736&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC87162&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-11T13:42:09Z&quot;,
+    &quot;type&quot;: &quot;Retirada&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Industrias ABC&quot;,
+      &quot;subscriberId&quot;: &quot;SUB1827&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Veloz Internet&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [1145678901&quot;,1132109876&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Maria Santos&quot;,
+        &quot;email&quot;: &quot;maria@veloz.com&quot;,
+        &quot;phone&quot;: &quot;11944556677&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO7261534&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 28716,
+        &quot;inventoryId&quot;: &quot;INV726351&quot;,
+        &quot;reference&quot;: &quot;Em frente à praça&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;SL&quot;,
+              &quot;value&quot;: &quot;42&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_600MB&quot;,
+          &quot;action&quot;: &quot;remover&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">101</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.76">10:49:50.765 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 749
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;9182736&quot;,&quot;associatedDocument&quot;:&quot;DOC87162&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-11T13:42:09Z&quot;,&quot;type&quot;:&quot;Retirada&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Industrias ABC&quot;,&quot;subscriberId&quot;:&quot;SUB1827&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Veloz Internet&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;1145678901\&quot;&quot;,&quot;1132109876\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Maria Santos&quot;,&quot;email&quot;:&quot;maria@veloz.com&quot;,&quot;phone&quot;:&quot;11944556677&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO7261534&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:28716,&quot;inventoryId&quot;:&quot;INV726351&quot;,&quot;reference&quot;:&quot;Em frente à praça&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;SL&quot;,&quot;value&quot;:&quot;42&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_600MB&quot;,&quot;action&quot;:&quot;remover&quot;}]}}}
+
+10:49:50.864 response time in milliseconds: 98
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:50 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;S&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.79">
+      <div class="step-ref passed">79</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;201&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.message == &#39;Created&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.order.id == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.2:84]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.2:84]</span>
+                <span class="scenario-name">Create a new order with valid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>55</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.2:84]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.2:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="2.21">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;1273849&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC12378&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-13T11:37:51Z&quot;,
+    &quot;type&quot;: &quot;Desbloqueio&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Supermercado Boa Compra&quot;,
+      &quot;subscriberId&quot;: &quot;SUB7152&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Link Dedicado&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [1934567890&quot;,1956781234&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Ricardo Almeida&quot;,
+        &quot;email&quot;: &quot;ricardo@link.com&quot;,
+        &quot;phone&quot;: &quot;19933445566&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO6253718&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 20918,
+        &quot;inventoryId&quot;: &quot;INV625178&quot;,
+        &quot;reference&quot;: &quot;Próximo ao estacionamento&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;LJ&quot;,
+              &quot;value&quot;: &quot;27&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_800MB&quot;,
+          &quot;action&quot;: &quot;desbloquear total&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">43</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.76">10:49:50.922 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 781
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;1273849&quot;,&quot;associatedDocument&quot;:&quot;DOC12378&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-13T11:37:51Z&quot;,&quot;type&quot;:&quot;Desbloqueio&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Supermercado Boa Compra&quot;,&quot;subscriberId&quot;:&quot;SUB7152&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Link Dedicado&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;1934567890\&quot;&quot;,&quot;1956781234\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Ricardo Almeida&quot;,&quot;email&quot;:&quot;ricardo@link.com&quot;,&quot;phone&quot;:&quot;19933445566&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO6253718&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:20918,&quot;inventoryId&quot;:&quot;INV625178&quot;,&quot;reference&quot;:&quot;Próximo ao estacionamento&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;LJ&quot;,&quot;value&quot;:&quot;27&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_800MB&quot;,&quot;action&quot;:&quot;desbloquear total&quot;}]}}}
+
+10:49:50.950 response time in milliseconds: 28
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:50 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;S&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.79">
+      <div class="step-ref passed">79</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;201&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.message == &#39;Created&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.order.id == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.3:84]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.3:84]</span>
+                <span class="scenario-name">Create a new order with valid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>60</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.3:84]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.3:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="3.21">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;5612378&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC67834&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-09T19:05:28Z&quot;,
+    &quot;type&quot;: &quot;AssociarCPE&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Escola Municipal&quot;,
+      &quot;subscriberId&quot;: &quot;SUB9018&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Educa Telecom&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [4733445566&quot;,4755667788&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Carla Mendes&quot;,
+        &quot;email&quot;: &quot;carla@educa.com&quot;,
+        &quot;phone&quot;: &quot;47922334455&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO3451627&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 31452,
+        &quot;inventoryId&quot;: &quot;INV345126&quot;,
+        &quot;reference&quot;: &quot;Ao lado da biblioteca&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;SL&quot;,
+              &quot;value&quot;: &quot;15&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_300MB&quot;,
+          &quot;action&quot;: &quot;adicionar&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">56</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.76">10:49:50.965 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 757
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;5612378&quot;,&quot;associatedDocument&quot;:&quot;DOC67834&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-09T19:05:28Z&quot;,&quot;type&quot;:&quot;AssociarCPE&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Escola Municipal&quot;,&quot;subscriberId&quot;:&quot;SUB9018&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Educa Telecom&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;4733445566\&quot;&quot;,&quot;4755667788\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Carla Mendes&quot;,&quot;email&quot;:&quot;carla@educa.com&quot;,&quot;phone&quot;:&quot;47922334455&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO3451627&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:31452,&quot;inventoryId&quot;:&quot;INV345126&quot;,&quot;reference&quot;:&quot;Ao lado da biblioteca&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;SL&quot;,&quot;value&quot;:&quot;15&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_300MB&quot;,&quot;action&quot;:&quot;adicionar&quot;}]}}}
+
+10:49:51.016 response time in milliseconds: 49
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:50 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;S&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.79">
+      <div class="step-ref passed">79</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;201&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.message == &#39;Created&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.order.id == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.4:84]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.4:84]</span>
+                <span class="scenario-name">Create a new order with valid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>19</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.4:84]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.4:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.4:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.4:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.4:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="4.21">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;7834561&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC90123&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-12T15:48:36Z&quot;,
+    &quot;type&quot;: &quot;Instalacao&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Consultório Médico&quot;,
+      &quot;subscriberId&quot;: &quot;SUB4589&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Saúde Internet&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [2145678901&quot;,2132109876&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Patrícia Oliveira&quot;,
+        &quot;email&quot;: &quot;patricia@saude.com&quot;,
+        &quot;phone&quot;: &quot;21944556677&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO9456123&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 29561,
+        &quot;inventoryId&quot;: &quot;INV945123&quot;,
+        &quot;reference&quot;: &quot;Em frente ao hospital&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;SL&quot;,
+              &quot;value&quot;: &quot;08&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_200MB&quot;,
+          &quot;action&quot;: &quot;adicionar&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="4.76">10:49:51.030 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 771
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;7834561&quot;,&quot;associatedDocument&quot;:&quot;DOC90123&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-12T15:48:36Z&quot;,&quot;type&quot;:&quot;Instalacao&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Consultório Médico&quot;,&quot;subscriberId&quot;:&quot;SUB4589&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Saúde Internet&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;2145678901\&quot;&quot;,&quot;2132109876\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Patrícia Oliveira&quot;,&quot;email&quot;:&quot;patricia@saude.com&quot;,&quot;phone&quot;:&quot;21944556677&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO9456123&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:29561,&quot;inventoryId&quot;:&quot;INV945123&quot;,&quot;reference&quot;:&quot;Em frente ao hospital&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;SL&quot;,&quot;value&quot;:&quot;08&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_200MB&quot;,&quot;action&quot;:&quot;adicionar&quot;}]}}}
+
+10:49:51.041 response time in milliseconds: 10
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;S&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.79">
+      <div class="step-ref passed">79</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;201&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.message == &#39;Created&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.order.id == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.5:84]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.5:84]</span>
+                <span class="scenario-name">Create a new order with valid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>17</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.5:84]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.5:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.5:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.5:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.5:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="5.21">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;6789012&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC23456&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-13T10:14:29Z&quot;,
+    &quot;type&quot;: &quot;Bloqueio&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Restaurante Sabor&quot;,
+      &quot;subscriberId&quot;: &quot;SUB5678&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Gourmet Net&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [1145678901&quot;,1132109876&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;André Santos&quot;,
+        &quot;email&quot;: &quot;andre@gourmet.com&quot;,
+        &quot;phone&quot;: &quot;11944556677&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO8901234&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 28910,
+        &quot;inventoryId&quot;: &quot;INV890123&quot;,
+        &quot;reference&quot;: &quot;Próximo ao shopping&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;LJ&quot;,
+              &quot;value&quot;: &quot;14&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_100MB&quot;,
+          &quot;action&quot;: &quot;bloquear parcial&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="5.76">10:49:51.053 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 762
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;6789012&quot;,&quot;associatedDocument&quot;:&quot;DOC23456&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-13T10:14:29Z&quot;,&quot;type&quot;:&quot;Bloqueio&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Restaurante Sabor&quot;,&quot;subscriberId&quot;:&quot;SUB5678&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Gourmet Net&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;1145678901\&quot;&quot;,&quot;1132109876\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;André Santos&quot;,&quot;email&quot;:&quot;andre@gourmet.com&quot;,&quot;phone&quot;:&quot;11944556677&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO8901234&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:28910,&quot;inventoryId&quot;:&quot;INV890123&quot;,&quot;reference&quot;:&quot;Próximo ao shopping&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;LJ&quot;,&quot;value&quot;:&quot;14&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_100MB&quot;,&quot;action&quot;:&quot;bloquear parcial&quot;}]}}}
+
+10:49:51.064 response time in milliseconds: 10
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;S&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.79">
+      <div class="step-ref passed">79</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;201&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.message == &#39;Created&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.order.id == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.6:84]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.6:84]</span>
+                <span class="scenario-name">Create a new order with valid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>19</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.6:84]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.6:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.6:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.6:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.6:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="6.21">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;2345601&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC78901&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-10T20:37:44Z&quot;,
+    &quot;type&quot;: &quot;Modificacao de Velocidade&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Escritório Contábil&quot;,
+      &quot;subscriberId&quot;: &quot;SUB9012&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Contabilidade Online&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [5133445566&quot;,5155667788&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Vanessa Mendes&quot;,
+        &quot;email&quot;: &quot;vanessa@contabil.com&quot;,
+        &quot;phone&quot;: &quot;51922334455&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO4567890&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 24567,
+        &quot;inventoryId&quot;: &quot;INV456789&quot;,
+        &quot;reference&quot;: &quot;Ao lado do banco&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;SL&quot;,
+              &quot;value&quot;: &quot;32&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_800MB&quot;,
+          &quot;action&quot;: &quot;adicionar&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="6.76">10:49:51.076 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 785
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;2345601&quot;,&quot;associatedDocument&quot;:&quot;DOC78901&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-10T20:37:44Z&quot;,&quot;type&quot;:&quot;Modificacao de Velocidade&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Escritório Contábil&quot;,&quot;subscriberId&quot;:&quot;SUB9012&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Contabilidade Online&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;5133445566\&quot;&quot;,&quot;5155667788\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Vanessa Mendes&quot;,&quot;email&quot;:&quot;vanessa@contabil.com&quot;,&quot;phone&quot;:&quot;51922334455&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO4567890&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:24567,&quot;inventoryId&quot;:&quot;INV456789&quot;,&quot;reference&quot;:&quot;Ao lado do banco&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;SL&quot;,&quot;value&quot;:&quot;32&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_800MB&quot;,&quot;action&quot;:&quot;adicionar&quot;}]}}}
+
+10:49:51.088 response time in milliseconds: 11
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;S&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.79">
+      <div class="step-ref passed">79</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;201&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.message == &#39;Created&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.order.id == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.7:84]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.7:84]</span>
+                <span class="scenario-name">Create a new order with valid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>16</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.7:84]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.7:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.7:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.7:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.7:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="7.21">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;8901234&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC12345&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-14T18:09:56Z&quot;,
+    &quot;type&quot;: &quot;RemanejamentoPonto&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Clínica Odontológica&quot;,
+      &quot;subscriberId&quot;: &quot;SUB2345&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Odonto Net&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [8145678901&quot;,8132109876&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Diego Oliveira&quot;,
+        &quot;email&quot;: &quot;diego@odonto.com&quot;,
+        &quot;phone&quot;: &quot;81944556677&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO1234567&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 21234,
+        &quot;inventoryId&quot;: &quot;INV123456&quot;,
+        &quot;reference&quot;: &quot;Em frente à farmácia&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;SL&quot;,
+              &quot;value&quot;: &quot;19&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_400MB&quot;,
+          &quot;action&quot;: &quot;adicionar&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">12</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="7.76">10:49:51.100 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 771
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;8901234&quot;,&quot;associatedDocument&quot;:&quot;DOC12345&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-14T18:09:56Z&quot;,&quot;type&quot;:&quot;RemanejamentoPonto&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Clínica Odontológica&quot;,&quot;subscriberId&quot;:&quot;SUB2345&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Odonto Net&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;8145678901\&quot;&quot;,&quot;8132109876\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Diego Oliveira&quot;,&quot;email&quot;:&quot;diego@odonto.com&quot;,&quot;phone&quot;:&quot;81944556677&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO1234567&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:21234,&quot;inventoryId&quot;:&quot;INV123456&quot;,&quot;reference&quot;:&quot;Em frente à farmácia&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;SL&quot;,&quot;value&quot;:&quot;19&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_400MB&quot;,&quot;action&quot;:&quot;adicionar&quot;}]}}}
+
+10:49:51.109 response time in milliseconds: 8
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;S&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.79">
+      <div class="step-ref passed">79</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;201&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.message == &#39;Created&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.order.id == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.8:84]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.8:84]</span>
+                <span class="scenario-name">Create a new order with valid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>16</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.8:84]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.8:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.8:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.8:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.8:84]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="8.21">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;4567890&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC89012&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-16T13:27:12Z&quot;,
+    &quot;type&quot;: &quot;Retirada&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Loja de Roupas&quot;,
+      &quot;subscriberId&quot;: &quot;SUB1234&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Moda Online&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [2145678901&quot;,2132109876&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Amanda Santos&quot;,
+        &quot;email&quot;: &quot;amanda@moda.com&quot;,
+        &quot;phone&quot;: &quot;21944556677&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO6789012&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 26789,
+        &quot;inventoryId&quot;: &quot;INV678901&quot;,
+        &quot;reference&quot;: &quot;Próximo ao teatro&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;LJ&quot;,
+              &quot;value&quot;: &quot;07&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_200MB&quot;,
+          &quot;action&quot;: &quot;remover&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.76">
+      <div class="step-ref passed">76</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">12</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="8.76">10:49:51.121 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 746
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;4567890&quot;,&quot;associatedDocument&quot;:&quot;DOC89012&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-16T13:27:12Z&quot;,&quot;type&quot;:&quot;Retirada&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Loja de Roupas&quot;,&quot;subscriberId&quot;:&quot;SUB1234&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Moda Online&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;2145678901\&quot;&quot;,&quot;2132109876\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Amanda Santos&quot;,&quot;email&quot;:&quot;amanda@moda.com&quot;,&quot;phone&quot;:&quot;21944556677&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO6789012&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:26789,&quot;inventoryId&quot;:&quot;INV678901&quot;,&quot;reference&quot;:&quot;Próximo ao teatro&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;LJ&quot;,&quot;value&quot;:&quot;07&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_200MB&quot;,&quot;action&quot;:&quot;remover&quot;}]}}}
+
+10:49:51.130 response time in milliseconds: 8
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.77">
+      <div class="step-ref passed">77</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 201</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.78">
+      <div class="step-ref passed">78</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;S&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.79">
+      <div class="step-ref passed">79</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;201&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.80">
+      <div class="step-ref passed">80</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.control.message == &#39;Created&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.81">
+      <div class="step-ref passed">81</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response.order.id == &#39;#notnull&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.1:150]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.1:150]</span>
+                <span class="scenario-name">Create a new order with invalid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>15</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.1:150]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.1:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.88">
+      <div class="step-ref passed">88</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.88">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;9182736&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC87162&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-11T13:42:09Z&quot;,
+    &quot;type&quot;: &quot;Retirada&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Industrias ABC&quot;,
+      &quot;subscriberId&quot;: &quot;SUB1827&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Veloz Internet&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [1145678901&quot;,1132109876&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Maria Santos&quot;,
+        &quot;email&quot;: &quot;maria@veloz.com&quot;,
+        &quot;phone&quot;: &quot;11944556677&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO7261534&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 28716,
+        &quot;inventoryId&quot;: &quot;INV726351&quot;,
+        &quot;reference&quot;: &quot;Em frente à praça&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;SL&quot;,
+              &quot;value&quot;: &quot;42&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_600MB&quot;,
+          &quot;action&quot;: &quot;remover&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.143">
+      <div class="step-ref passed">143</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.143">10:49:51.144 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 749
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;9182736&quot;,&quot;associatedDocument&quot;:&quot;DOC87162&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-11T13:42:09Z&quot;,&quot;type&quot;:&quot;Retirada&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Industrias ABC&quot;,&quot;subscriberId&quot;:&quot;SUB1827&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Veloz Internet&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;1145678901\&quot;&quot;,&quot;1132109876\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Maria Santos&quot;,&quot;email&quot;:&quot;maria@veloz.com&quot;,&quot;phone&quot;:&quot;11944556677&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO7261534&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:28716,&quot;inventoryId&quot;:&quot;INV726351&quot;,&quot;reference&quot;:&quot;Em frente à praça&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;SL&quot;,&quot;value&quot;:&quot;42&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_600MB&quot;,&quot;action&quot;:&quot;remover&quot;}]}}}
+
+10:49:51.156 response time in milliseconds: 11
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.144">
+      <div class="step-ref failed">144</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status </span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.144">10:49:51.157 src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+Then status 
+no step-definition method match found for: status 
+src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.145">
+      <div class="step-ref skipped">145</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;E&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.146">
+      <div class="step-ref skipped">146</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.147">
+      <div class="step-ref skipped">147</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.message contains &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.2:150]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.2:150]</span>
+                <span class="scenario-name">Create a new order with invalid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>14</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.2:150]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.2:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.88">
+      <div class="step-ref passed">88</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="2.88">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;1273849&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC12378&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-13T11:37:51Z&quot;,
+    &quot;type&quot;: &quot;Desbloqueio&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Supermercado Boa Compra&quot;,
+      &quot;subscriberId&quot;: &quot;SUB7152&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Link Dedicado&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [1934567890&quot;,1956781234&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Ricardo Almeida&quot;,
+        &quot;email&quot;: &quot;ricardo@link.com&quot;,
+        &quot;phone&quot;: &quot;19933445566&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO6253718&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 20918,
+        &quot;inventoryId&quot;: &quot;INV625178&quot;,
+        &quot;reference&quot;: &quot;Próximo ao estacionamento&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;LJ&quot;,
+              &quot;value&quot;: &quot;27&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_800MB&quot;,
+          &quot;action&quot;: &quot;desbloquear total&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.143">
+      <div class="step-ref passed">143</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">13</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.143">10:49:51.165 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 781
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;1273849&quot;,&quot;associatedDocument&quot;:&quot;DOC12378&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-13T11:37:51Z&quot;,&quot;type&quot;:&quot;Desbloqueio&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Supermercado Boa Compra&quot;,&quot;subscriberId&quot;:&quot;SUB7152&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Link Dedicado&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;1934567890\&quot;&quot;,&quot;1956781234\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Ricardo Almeida&quot;,&quot;email&quot;:&quot;ricardo@link.com&quot;,&quot;phone&quot;:&quot;19933445566&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO6253718&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:20918,&quot;inventoryId&quot;:&quot;INV625178&quot;,&quot;reference&quot;:&quot;Próximo ao estacionamento&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;LJ&quot;,&quot;value&quot;:&quot;27&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_800MB&quot;,&quot;action&quot;:&quot;desbloquear total&quot;}]}}}
+
+10:49:51.176 response time in milliseconds: 10
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.144">
+      <div class="step-ref failed">144</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status </span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.144">10:49:51.177 src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+Then status 
+no step-definition method match found for: status 
+src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.145">
+      <div class="step-ref skipped">145</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;E&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.146">
+      <div class="step-ref skipped">146</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.147">
+      <div class="step-ref skipped">147</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.message contains &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.3:150]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.3:150]</span>
+                <span class="scenario-name">Create a new order with invalid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>26</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.3:150]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.3:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.88">
+      <div class="step-ref passed">88</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="3.88">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;5612378&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC67834&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-09T19:05:28Z&quot;,
+    &quot;type&quot;: &quot;AssociarCPE&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Escola Municipal&quot;,
+      &quot;subscriberId&quot;: &quot;SUB9018&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Educa Telecom&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [4733445566&quot;,4755667788&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Carla Mendes&quot;,
+        &quot;email&quot;: &quot;carla@educa.com&quot;,
+        &quot;phone&quot;: &quot;47922334455&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO3451627&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 31452,
+        &quot;inventoryId&quot;: &quot;INV345126&quot;,
+        &quot;reference&quot;: &quot;Ao lado da biblioteca&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;SL&quot;,
+              &quot;value&quot;: &quot;15&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_300MB&quot;,
+          &quot;action&quot;: &quot;adicionar&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.143">
+      <div class="step-ref passed">143</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">22</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.143">10:49:51.199 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 757
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;5612378&quot;,&quot;associatedDocument&quot;:&quot;DOC67834&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-09T19:05:28Z&quot;,&quot;type&quot;:&quot;AssociarCPE&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Escola Municipal&quot;,&quot;subscriberId&quot;:&quot;SUB9018&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Educa Telecom&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;4733445566\&quot;&quot;,&quot;4755667788\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Carla Mendes&quot;,&quot;email&quot;:&quot;carla@educa.com&quot;,&quot;phone&quot;:&quot;47922334455&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO3451627&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:31452,&quot;inventoryId&quot;:&quot;INV345126&quot;,&quot;reference&quot;:&quot;Ao lado da biblioteca&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;SL&quot;,&quot;value&quot;:&quot;15&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_300MB&quot;,&quot;action&quot;:&quot;adicionar&quot;}]}}}
+
+10:49:51.211 response time in milliseconds: 11
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.144">
+      <div class="step-ref failed">144</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status </span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.144">10:49:51.212 src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+Then status 
+no step-definition method match found for: status 
+src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.145">
+      <div class="step-ref skipped">145</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;E&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.146">
+      <div class="step-ref skipped">146</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.147">
+      <div class="step-ref skipped">147</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.message contains &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.4:150]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.4:150]</span>
+                <span class="scenario-name">Create a new order with invalid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>17</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.4:150]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.4:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.4:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.4:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.4:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.88">
+      <div class="step-ref passed">88</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="4.88">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;7834561&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC90123&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-12T15:48:36Z&quot;,
+    &quot;type&quot;: &quot;Instalacao&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Consultório Médico&quot;,
+      &quot;subscriberId&quot;: &quot;SUB4589&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Saúde Internet&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [2145678901&quot;,2132109876&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Patrícia Oliveira&quot;,
+        &quot;email&quot;: &quot;patricia@saude.com&quot;,
+        &quot;phone&quot;: &quot;21944556677&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO9456123&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 29561,
+        &quot;inventoryId&quot;: &quot;INV945123&quot;,
+        &quot;reference&quot;: &quot;Em frente ao hospital&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;SL&quot;,
+              &quot;value&quot;: &quot;08&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_200MB&quot;,
+          &quot;action&quot;: &quot;adicionar&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.143">
+      <div class="step-ref passed">143</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="4.143">10:49:51.221 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 771
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;7834561&quot;,&quot;associatedDocument&quot;:&quot;DOC90123&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-12T15:48:36Z&quot;,&quot;type&quot;:&quot;Instalacao&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Consultório Médico&quot;,&quot;subscriberId&quot;:&quot;SUB4589&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Saúde Internet&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;2145678901\&quot;&quot;,&quot;2132109876\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Patrícia Oliveira&quot;,&quot;email&quot;:&quot;patricia@saude.com&quot;,&quot;phone&quot;:&quot;21944556677&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO9456123&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:29561,&quot;inventoryId&quot;:&quot;INV945123&quot;,&quot;reference&quot;:&quot;Em frente ao hospital&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;SL&quot;,&quot;value&quot;:&quot;08&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_200MB&quot;,&quot;action&quot;:&quot;adicionar&quot;}]}}}
+
+10:49:51.234 response time in milliseconds: 12
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.144">
+      <div class="step-ref failed">144</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status </span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="4.144">10:49:51.235 src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+Then status 
+no step-definition method match found for: status 
+src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.145">
+      <div class="step-ref skipped">145</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;E&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.146">
+      <div class="step-ref skipped">146</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.147">
+      <div class="step-ref skipped">147</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.message contains &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.5:150]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.5:150]</span>
+                <span class="scenario-name">Create a new order with invalid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>14</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.5:150]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.5:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.5:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.5:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.5:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.88">
+      <div class="step-ref passed">88</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="5.88">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;6789012&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC23456&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-13T10:14:29Z&quot;,
+    &quot;type&quot;: &quot;Bloqueio&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Restaurante Sabor&quot;,
+      &quot;subscriberId&quot;: &quot;SUB5678&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Gourmet Net&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [1145678901&quot;,1132109876&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;André Santos&quot;,
+        &quot;email&quot;: &quot;andre@gourmet.com&quot;,
+        &quot;phone&quot;: &quot;11944556677&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO8901234&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 28910,
+        &quot;inventoryId&quot;: &quot;INV890123&quot;,
+        &quot;reference&quot;: &quot;Próximo ao shopping&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;LJ&quot;,
+              &quot;value&quot;: &quot;14&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_100MB&quot;,
+          &quot;action&quot;: &quot;bloquear parcial&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.143">
+      <div class="step-ref passed">143</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">13</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="5.143">10:49:51.245 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 762
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;6789012&quot;,&quot;associatedDocument&quot;:&quot;DOC23456&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-13T10:14:29Z&quot;,&quot;type&quot;:&quot;Bloqueio&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Restaurante Sabor&quot;,&quot;subscriberId&quot;:&quot;SUB5678&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Gourmet Net&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;1145678901\&quot;&quot;,&quot;1132109876\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;André Santos&quot;,&quot;email&quot;:&quot;andre@gourmet.com&quot;,&quot;phone&quot;:&quot;11944556677&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO8901234&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:28910,&quot;inventoryId&quot;:&quot;INV890123&quot;,&quot;reference&quot;:&quot;Próximo ao shopping&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;LJ&quot;,&quot;value&quot;:&quot;14&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_100MB&quot;,&quot;action&quot;:&quot;bloquear parcial&quot;}]}}}
+
+10:49:51.255 response time in milliseconds: 9
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.144">
+      <div class="step-ref failed">144</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status </span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="5.144">10:49:51.256 src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+Then status 
+no step-definition method match found for: status 
+src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.145">
+      <div class="step-ref skipped">145</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;E&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.146">
+      <div class="step-ref skipped">146</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.147">
+      <div class="step-ref skipped">147</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.message contains &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.6:150]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.6:150]</span>
+                <span class="scenario-name">Create a new order with invalid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>17</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.6:150]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.6:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.6:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.6:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.6:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.88">
+      <div class="step-ref passed">88</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="6.88">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;2345601&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC78901&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-10T20:37:44Z&quot;,
+    &quot;type&quot;: &quot;Modificacao de Velocidade&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Escritório Contábil&quot;,
+      &quot;subscriberId&quot;: &quot;SUB9012&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Contabilidade Online&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [5133445566&quot;,5155667788&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Vanessa Mendes&quot;,
+        &quot;email&quot;: &quot;vanessa@contabil.com&quot;,
+        &quot;phone&quot;: &quot;51922334455&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO4567890&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 24567,
+        &quot;inventoryId&quot;: &quot;INV456789&quot;,
+        &quot;reference&quot;: &quot;Ao lado do banco&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;SL&quot;,
+              &quot;value&quot;: &quot;32&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_800MB&quot;,
+          &quot;action&quot;: &quot;adicionar&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.143">
+      <div class="step-ref passed">143</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="6.143">10:49:51.270 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 785
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;2345601&quot;,&quot;associatedDocument&quot;:&quot;DOC78901&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-10T20:37:44Z&quot;,&quot;type&quot;:&quot;Modificacao de Velocidade&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Escritório Contábil&quot;,&quot;subscriberId&quot;:&quot;SUB9012&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Contabilidade Online&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;5133445566\&quot;&quot;,&quot;5155667788\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Vanessa Mendes&quot;,&quot;email&quot;:&quot;vanessa@contabil.com&quot;,&quot;phone&quot;:&quot;51922334455&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO4567890&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:24567,&quot;inventoryId&quot;:&quot;INV456789&quot;,&quot;reference&quot;:&quot;Ao lado do banco&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;SL&quot;,&quot;value&quot;:&quot;32&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_800MB&quot;,&quot;action&quot;:&quot;adicionar&quot;}]}}}
+
+10:49:51.282 response time in milliseconds: 12
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.144">
+      <div class="step-ref failed">144</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status </span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="6.144">10:49:51.283 src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+Then status 
+no step-definition method match found for: status 
+src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.145">
+      <div class="step-ref skipped">145</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;E&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.146">
+      <div class="step-ref skipped">146</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.147">
+      <div class="step-ref skipped">147</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.message contains &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.7:150]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.7:150]</span>
+                <span class="scenario-name">Create a new order with invalid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>14</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.7:150]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.7:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.7:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.7:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.7:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.88">
+      <div class="step-ref passed">88</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="7.88">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;8901234&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC12345&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-14T18:09:56Z&quot;,
+    &quot;type&quot;: &quot;RemanejamentoPonto&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Clínica Odontológica&quot;,
+      &quot;subscriberId&quot;: &quot;SUB2345&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Odonto Net&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [8145678901&quot;,8132109876&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Diego Oliveira&quot;,
+        &quot;email&quot;: &quot;diego@odonto.com&quot;,
+        &quot;phone&quot;: &quot;81944556677&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO1234567&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 21234,
+        &quot;inventoryId&quot;: &quot;INV123456&quot;,
+        &quot;reference&quot;: &quot;Em frente à farmácia&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;SL&quot;,
+              &quot;value&quot;: &quot;19&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_400MB&quot;,
+          &quot;action&quot;: &quot;adicionar&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.143">
+      <div class="step-ref passed">143</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">12</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="7.143">10:49:51.293 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 771
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;8901234&quot;,&quot;associatedDocument&quot;:&quot;DOC12345&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-14T18:09:56Z&quot;,&quot;type&quot;:&quot;RemanejamentoPonto&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Clínica Odontológica&quot;,&quot;subscriberId&quot;:&quot;SUB2345&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Odonto Net&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;8145678901\&quot;&quot;,&quot;8132109876\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Diego Oliveira&quot;,&quot;email&quot;:&quot;diego@odonto.com&quot;,&quot;phone&quot;:&quot;81944556677&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO1234567&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:21234,&quot;inventoryId&quot;:&quot;INV123456&quot;,&quot;reference&quot;:&quot;Em frente à farmácia&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;SL&quot;,&quot;value&quot;:&quot;19&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_400MB&quot;,&quot;action&quot;:&quot;adicionar&quot;}]}}}
+
+10:49:51.303 response time in milliseconds: 9
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.144">
+      <div class="step-ref failed">144</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status </span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="7.144">10:49:51.304 src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+Then status 
+no step-definition method match found for: status 
+src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.145">
+      <div class="step-ref skipped">145</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;E&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.146">
+      <div class="step-ref skipped">146</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.147">
+      <div class="step-ref skipped">147</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.message contains &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.8:150]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.8:150]</span>
+                <span class="scenario-name">Create a new order with invalid request body</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>15</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.8:150]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.8:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.8:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.8:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.8:150]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.88">
+      <div class="step-ref passed">88</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="8.88">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;4567890&quot;,
+    &quot;associatedDocument&quot;: &quot;DOC89012&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2023-04-16T13:27:12Z&quot;,
+    &quot;type&quot;: &quot;Retirada&quot;,
+    &quot;infraType&quot;: &quot;FTTP&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Loja de Roupas&quot;,
+      &quot;subscriberId&quot;: &quot;SUB1234&quot;,
+      &quot;businessUnity&quot;: &quot;empresarial&quot;,
+      &quot;fantasyName&quot;: &quot;Moda Online&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [2145678901&quot;,2132109876&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;Amanda Santos&quot;,
+        &quot;email&quot;: &quot;amanda@moda.com&quot;,
+        &quot;phone&quot;: &quot;21944556677&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: false,
+      &quot;date&quot;: &quot;&quot;,
+      &quot;mandatoryType&quot;: &quot;Permitido&quot;,
+      &quot;workOrderId&quot;: &quot;WO6789012&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 26789,
+        &quot;inventoryId&quot;: &quot;INV678901&quot;,
+        &quot;reference&quot;: &quot;Próximo ao teatro&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;LJ&quot;,
+              &quot;value&quot;: &quot;07&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_200MB&quot;,
+          &quot;action&quot;: &quot;remover&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.143">
+      <div class="step-ref passed">143</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="8.143">10:49:51.313 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 746
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;4567890&quot;,&quot;associatedDocument&quot;:&quot;DOC89012&quot;,&quot;associatedDocumentDate&quot;:&quot;2023-04-16T13:27:12Z&quot;,&quot;type&quot;:&quot;Retirada&quot;,&quot;infraType&quot;:&quot;FTTP&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Loja de Roupas&quot;,&quot;subscriberId&quot;:&quot;SUB1234&quot;,&quot;businessUnity&quot;:&quot;empresarial&quot;,&quot;fantasyName&quot;:&quot;Moda Online&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;2145678901\&quot;&quot;,&quot;2132109876\&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;Amanda Santos&quot;,&quot;email&quot;:&quot;amanda@moda.com&quot;,&quot;phone&quot;:&quot;21944556677&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:false,&quot;date&quot;:&quot;&quot;,&quot;mandatoryType&quot;:&quot;Permitido&quot;,&quot;workOrderId&quot;:&quot;WO6789012&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:26789,&quot;inventoryId&quot;:&quot;INV678901&quot;,&quot;reference&quot;:&quot;Próximo ao teatro&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;LJ&quot;,&quot;value&quot;:&quot;07&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_200MB&quot;,&quot;action&quot;:&quot;remover&quot;}]}}}
+
+10:49:51.324 response time in milliseconds: 10
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.144">
+      <div class="step-ref failed">144</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status </span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="8.144">10:49:51.325 src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+Then status 
+no step-definition method match found for: status 
+src/test/java/com/bootexample4/api_tests/productOrder_post.feature:144
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.145">
+      <div class="step-ref skipped">145</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;E&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.146">
+      <div class="step-ref skipped">146</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.147">
+      <div class="step-ref skipped">147</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.message contains &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:152]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:152]</span>
+                <span class="scenario-name">Create a new order with unauthorized request</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>12</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:152]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:152]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:152]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:152]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:152]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.153">
+      <div class="step-ref passed">153</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.154">
+      <div class="step-ref passed">154</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.154">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;10&quot;,
+    &quot;associatedDocument&quot;: &quot;VTT001&quot;,
+    &quot;associatedDocumentDate&quot;: &quot;2021-06-09T18:20:53-03:00&quot;,
+    &quot;type&quot;: &quot;Instalacao&quot;,
+    &quot;infraType&quot;: &quot;FTTH&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Sandbox V.tal&quot;,
+      &quot;subscriberId&quot;: &quot;SVTAL001&quot;,
+      &quot;businessUnity&quot;: &quot;varejo&quot;,
+      &quot;fantasyName&quot;: &quot;InterHome Internet&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [&quot;000000000&quot;,&quot;&quot;,&quot;&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;sindico Vtal&quot;,
+        &quot;email&quot;: &quot;sindicovtal@vtal.com&quot;,
+        &quot;phone&quot;: &quot;21999900000&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: true,
+      &quot;date&quot;: &quot;2021-05-05T08:00:00&quot;,
+      &quot;mandatoryType&quot;: &quot;Obrigatorio&quot;,
+      &quot;workOrderId&quot;: &quot;SA-562403&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 14393,
+        &quot;inventoryId&quot;: &quot;1766156&quot;,
+        &quot;reference&quot;: &quot;Do lado da padaria&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;ES&quot;,
+              &quot;value&quot;: &quot;ARC201&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_200MB&quot;,
+          &quot;action&quot;: &quot;adicionar&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.209">
+      <div class="step-ref passed">209</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">10</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.209">10:49:51.332 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 764
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;10&quot;,&quot;associatedDocument&quot;:&quot;VTT001&quot;,&quot;associatedDocumentDate&quot;:&quot;2021-06-09T18:20:53-03:00&quot;,&quot;type&quot;:&quot;Instalacao&quot;,&quot;infraType&quot;:&quot;FTTH&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Sandbox V.tal&quot;,&quot;subscriberId&quot;:&quot;SVTAL001&quot;,&quot;businessUnity&quot;:&quot;varejo&quot;,&quot;fantasyName&quot;:&quot;InterHome Internet&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;000000000&quot;,&quot;&quot;,&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;sindico Vtal&quot;,&quot;email&quot;:&quot;sindicovtal@vtal.com&quot;,&quot;phone&quot;:&quot;21999900000&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:true,&quot;date&quot;:&quot;2021-05-05T08:00:00&quot;,&quot;mandatoryType&quot;:&quot;Obrigatorio&quot;,&quot;workOrderId&quot;:&quot;SA-562403&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:14393,&quot;inventoryId&quot;:&quot;1766156&quot;,&quot;reference&quot;:&quot;Do lado da padaria&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;ES&quot;,&quot;value&quot;:&quot;ARC201&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_200MB&quot;,&quot;action&quot;:&quot;adicionar&quot;}]}}}
+
+10:49:51.340 response time in milliseconds: 8
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.210">
+      <div class="step-ref failed">210</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 401</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.210">10:49:51.341 src/test/java/com/bootexample4/api_tests/productOrder_post.feature:210
+Then status 401
+status code was: 201, expected: 401, response time in milliseconds: 8, url: http://localhost:4010/productOrder, response: 
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+src/test/java/com/bootexample4/api_tests/productOrder_post.feature:210
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.211">
+      <div class="step-ref skipped">211</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;E&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.212">
+      <div class="step-ref skipped">212</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;401&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.213">
+      <div class="step-ref skipped">213</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.message == &#39;Unauthorized&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:215]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:215]</span>
+                <span class="scenario-name">Create a new order with exceeded quota</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>12</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:215]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:215]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:215]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:215]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:215]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.216">
+      <div class="step-ref passed">216</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/productOrder&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.217">
+      <div class="step-ref passed">217</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.217">{
+  &quot;order&quot;: {
+    &quot;correlationOrder&quot;: &quot;10&quot;,
+    &quot;associatedDocument&quot;: &quot;VTT001&quot;, 
+    &quot;associatedDocumentDate&quot;: &quot;2021-06-09T18:20:53-03:00&quot;,
+    &quot;type&quot;: &quot;Instalacao&quot;,
+    &quot;infraType&quot;: &quot;FTTH&quot;,
+    &quot;customer&quot;: {
+      &quot;name&quot;: &quot;Sandbox V.tal&quot;,
+      &quot;subscriberId&quot;: &quot;SVTAL001&quot;,
+      &quot;businessUnity&quot;: &quot;varejo&quot;,
+      &quot;fantasyName&quot;: &quot;InterHome Internet&quot;,
+      &quot;phoneNumber&quot;: {
+        &quot;phoneNumbers&quot;: [&quot;000000000&quot;,&quot;&quot;,&quot;&quot;]
+      },
+      &quot;workContact&quot;: {
+        &quot;name&quot;: &quot;sindico Vtal&quot;,
+        &quot;email&quot;: &quot;sindicovtal@vtal.com&quot;,
+        &quot;phone&quot;: &quot;21999900000&quot;
+      }
+    },
+    &quot;appointment&quot;: {
+      &quot;hasSlot&quot;: true,
+      &quot;date&quot;: &quot;2021-05-05T08:00:00&quot;,
+      &quot;mandatoryType&quot;: &quot;Obrigatorio&quot;,
+      &quot;workOrderId&quot;: &quot;SA-562403&quot;
+    },
+    &quot;addresses&quot;: {
+      &quot;address&quot;: {
+        &quot;id&quot;: 14393,
+        &quot;inventoryId&quot;: &quot;1766156&quot;,
+        &quot;reference&quot;: &quot;Do lado da padaria&quot;,
+        &quot;complement&quot;: {
+          &quot;complements&quot;: [
+            {
+              &quot;type&quot;: &quot;ES&quot;,
+              &quot;value&quot;: &quot;ARC201&quot;
+            }
+          ]
+        }
+      }
+    },
+    &quot;products&quot;: {
+      &quot;product&quot;: [
+        {
+          &quot;catalogId&quot;: &quot;BL_200MB&quot;,
+          &quot;action&quot;: &quot;adicionar&quot;
+        }
+      ]
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.272">
+      <div class="step-ref passed">272</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">10</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.272">10:49:51.350 request:
+1 &gt; POST http://localhost:4010/productOrder
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 764
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;order&quot;:{&quot;correlationOrder&quot;:&quot;10&quot;,&quot;associatedDocument&quot;:&quot;VTT001&quot;,&quot;associatedDocumentDate&quot;:&quot;2021-06-09T18:20:53-03:00&quot;,&quot;type&quot;:&quot;Instalacao&quot;,&quot;infraType&quot;:&quot;FTTH&quot;,&quot;customer&quot;:{&quot;name&quot;:&quot;Sandbox V.tal&quot;,&quot;subscriberId&quot;:&quot;SVTAL001&quot;,&quot;businessUnity&quot;:&quot;varejo&quot;,&quot;fantasyName&quot;:&quot;InterHome Internet&quot;,&quot;phoneNumber&quot;:{&quot;phoneNumbers&quot;:[&quot;000000000&quot;,&quot;&quot;,&quot;&quot;]},&quot;workContact&quot;:{&quot;name&quot;:&quot;sindico Vtal&quot;,&quot;email&quot;:&quot;sindicovtal@vtal.com&quot;,&quot;phone&quot;:&quot;21999900000&quot;}},&quot;appointment&quot;:{&quot;hasSlot&quot;:true,&quot;date&quot;:&quot;2021-05-05T08:00:00&quot;,&quot;mandatoryType&quot;:&quot;Obrigatorio&quot;,&quot;workOrderId&quot;:&quot;SA-562403&quot;},&quot;addresses&quot;:{&quot;address&quot;:{&quot;id&quot;:14393,&quot;inventoryId&quot;:&quot;1766156&quot;,&quot;reference&quot;:&quot;Do lado da padaria&quot;,&quot;complement&quot;:{&quot;complements&quot;:[{&quot;type&quot;:&quot;ES&quot;,&quot;value&quot;:&quot;ARC201&quot;}]}}},&quot;products&quot;:{&quot;product&quot;:[{&quot;catalogId&quot;:&quot;BL_200MB&quot;,&quot;action&quot;:&quot;adicionar&quot;}]}}}
+
+10:49:51.358 response time in milliseconds: 6
+1 &lt; 201
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: application/json
+1 &lt; Content-Length: 89
+1 &lt; Date: Fri, 24 May 2024 10:49:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.273">
+      <div class="step-ref failed">273</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 429</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.273">10:49:51.359 src/test/java/com/bootexample4/api_tests/productOrder_post.feature:273
+Then status 429
+status code was: 201, expected: 429, response time in milliseconds: 6, url: http://localhost:4010/productOrder, response: 
+{&quot;control&quot;:{&quot;type&quot;:&quot;S&quot;,&quot;code&quot;:&quot;201&quot;,&quot;message&quot;:&quot;Created&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;}}
+src/test/java/com/bootexample4/api_tests/productOrder_post.feature:273
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.274">
+      <div class="step-ref skipped">274</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.type == &#39;E&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.275">
+      <div class="step-ref skipped">275</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.code == &#39;429&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.276">
+      <div class="step-ref skipped">276</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.control.message == &#39;Too Many Requests - Exceeded Quota&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
