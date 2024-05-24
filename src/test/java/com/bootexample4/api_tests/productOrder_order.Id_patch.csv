@@ -1,0 +1,11 @@
+scenario,request,expectedStatus,expectedResponse
+"Atualizar ordem de serviço","{ "order.Id": "20230315000001" }",200,"{ "message": "Ordem de serviço atualizada com sucesso" }"
+"Atualizar ordem de serviço","{ "order.Id": "20230315000002" }",200,"{ "message": "Ordem de serviço atualizada com sucesso" }"
+"Atualizar ordem de serviço","{ "order.Id": "20230315000003" }",200,"{ "message": "Ordem de serviço atualizada com sucesso" }"
+"Atualizar ordem de serviço","{ "order.Id": "20230315000004" }",200,"{ "message": "Ordem de serviço atualizada com sucesso" }"
+"Atualizar ordem de serviço","{ "order.Id": "20230315000005" }",200,"{ "message": "Ordem de serviço atualizada com sucesso" }"
+"Atualizar ordem de serviço","{ "order.Id": "20230315000006" }",200,"{ "message": "Ordem de serviço atualizada com sucesso" }"
+"Atualizar ordem de serviço","{ "order.Id": "20230315000007" }",200,"{ "message": "Ordem de serviço atualizada com sucesso" }"
+"Atualizar ordem de serviço","{ "order.Id": "20230315000008" }",200,"{ "message": "Ordem de serviço atualizada com sucesso" }"
+"Atualizar ordem de serviço","{ "order.Id": "20230315000009" }",200,"{ "message": "Ordem de serviço atualizada com sucesso" }"
+"Atualizar ordem de serviço","{ "order.Id": "20230315000010" }",200,"{ "message": "Ordem de serviço atualizada com sucesso" }"
