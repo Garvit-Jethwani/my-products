@@ -1,0 +1,7168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"6ddcbdba-4cd9-459f-b5b3-1de42d7a9ebb",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>src.test.java.com.bootexample4.api_tests.listener_productOrderStateChangeEvent_post</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">10</div>
+      <div id="nav-fail" class="bg-danger">13</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2024-05-24 10:24:51 AM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1.1:90]"><span>[1.1:90]</span> <span>Test successful closing notification</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.2:90]"><span>[1.2:90]</span> <span>Test successful closing notification</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.3:90]"><span>[1.3:90]</span> <span>Test successful closing notification</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.4:90]"><span>[1.4:90]</span> <span>Test successful closing notification</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.5:90]"><span>[1.5:90]</span> <span>Test successful closing notification</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.6:90]"><span>[1.6:90]</span> <span>Test successful closing notification</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.7:90]"><span>[1.7:90]</span> <span>Test successful closing notification</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.8:90]"><span>[1.8:90]</span> <span>Test successful closing notification</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.9:90]"><span>[1.9:90]</span> <span>Test successful closing notification</span></a>
+          </div>
+          <div class="nav-item passed">
+            <a href="#[1.10:90]"><span>[1.10:90]</span> <span>Test successful closing notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2:92]"><span>[2:92]</span> <span>Test cancel notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[3:116]"><span>[3:116]</span> <span>Test ONT already in use notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4:146]"><span>[4:146]</span> <span>Test closing notification with ontOwner Vtal - Install</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5.1:252]"><span>[5.1:252]</span> <span>Test error responses</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5.2:252]"><span>[5.2:252]</span> <span>Test error responses</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5.3:252]"><span>[5.3:252]</span> <span>Test error responses</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5.4:252]"><span>[5.4:252]</span> <span>Test error responses</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5.5:252]"><span>[5.5:252]</span> <span>Test error responses</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5.6:252]"><span>[5.6:252]</span> <span>Test error responses</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5.7:252]"><span>[5.7:252]</span> <span>Test error responses</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5.8:252]"><span>[5.8:252]</span> <span>Test error responses</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5.9:252]"><span>[5.9:252]</span> <span>Test error responses</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[5.10:252]"><span>[5.10:252]</span> <span>Test error responses</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Test /listener/productOrderStateChangeEvent endpoint</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:90]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:90]</span>
+                <span class="scenario-name">Test successful closing notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>747</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:90]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">44</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">39</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.21">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2023-01-15T09:30:00Z&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;sub_123456&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;ord_789012&quot;,
+      &quot;correlationOrder&quot;: &quot;corr_345678&quot;,
+      &quot;associatedDocument&quot;: &quot;doc_901234&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;description&quot;: &quot;Ordem encerrada com sucesso.&quot;,
+      &quot;lostEquipment&quot;: False,
+      &quot;resource&quot;: {
+        &quot;gponAccess&quot;: &quot;gpon_567890&quot;,
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: {
+            &quot;item&quot;: [
+              {
+                &quot;name&quot;: &quot;enderecoCDO&quot;,
+                &quot;value&quot;: &quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;
+              },
+              {
+                &quot;name&quot;: &quot;producer_olt&quot;, 
+                &quot;value&quot;: &quot;HUAWEI&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.O:45&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;estacao&quot;,
+                &quot;value&quot;: &quot;BEL&quot;
+              },
+              {
+                &quot;name&quot;: &quot;cnl&quot;,
+                &quot;value&quot;: &quot;CBF&quot;
+              },
+              {
+                &quot;name&quot;: &quot;olt&quot;,
+                &quot;value&quot;: &quot;MA-CTO04-GHUA&quot;
+              },
+              {
+                &quot;name&quot;: &quot;primaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEO-15/1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;secondaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEOS-165&quot;  
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">649</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.86">10:24:50.636 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 825
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2023-01-15T09:30:00Z&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;sub_123456&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;ord_789012&quot;,&quot;correlationOrder&quot;:&quot;corr_345678&quot;,&quot;associatedDocument&quot;:&quot;doc_901234&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;Ordem encerrada com sucesso.&quot;,&quot;lostEquipment&quot;:&quot;False&quot;,&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;gpon_567890&quot;,&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;enderecoCDO&quot;,&quot;value&quot;:&quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;},{&quot;name&quot;:&quot;producer_olt&quot;,&quot;value&quot;:&quot;HUAWEI&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.O:45&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;},{&quot;name&quot;:&quot;estacao&quot;,&quot;value&quot;:&quot;BEL&quot;},{&quot;name&quot;:&quot;cnl&quot;,&quot;value&quot;:&quot;CBF&quot;},{&quot;name&quot;:&quot;olt&quot;,&quot;value&quot;:&quot;MA-CTO04-GHUA&quot;},{&quot;name&quot;:&quot;primaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEO-15\/1&quot;},{&quot;name&quot;:&quot;secondaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEOS-165&quot;}]}}}}}}
+
+10:24:50.843 response time in milliseconds: 199
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:50 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.2:90]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.2:90]</span>
+                <span class="scenario-name">Test successful closing notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>52</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.2:90]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.2:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="2.21">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2023-02-20T13:15:30Z&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;sub_246810&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;ord_135791&quot;,
+      &quot;correlationOrder&quot;: &quot;corr_802468&quot;,
+      &quot;associatedDocument&quot;: &quot;doc_579135&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;description&quot;: &quot;Ordem encerrada com sucesso.&quot;,
+      &quot;lostEquipment&quot;: True,
+      &quot;resource&quot;: {
+        &quot;gponAccess&quot;: &quot;gpon_024681&quot;,
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: {
+            &quot;item&quot;: [
+              {
+                &quot;name&quot;: &quot;enderecoCDO&quot;,
+                &quot;value&quot;: &quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;
+              },
+              {
+                &quot;name&quot;: &quot;producer_olt&quot;, 
+                &quot;value&quot;: &quot;HUAWEI&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.O:45&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;estacao&quot;,
+                &quot;value&quot;: &quot;BEL&quot;
+              },
+              {
+                &quot;name&quot;: &quot;cnl&quot;,
+                &quot;value&quot;: &quot;CBF&quot;
+              },
+              {
+                &quot;name&quot;: &quot;olt&quot;,
+                &quot;value&quot;: &quot;MA-CTO04-GHUA&quot;
+              },
+              {
+                &quot;name&quot;: &quot;primaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEO-15/1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;secondaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEOS-165&quot;  
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">37</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.86">10:24:50.885 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 824
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2023-02-20T13:15:30Z&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;sub_246810&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;ord_135791&quot;,&quot;correlationOrder&quot;:&quot;corr_802468&quot;,&quot;associatedDocument&quot;:&quot;doc_579135&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;Ordem encerrada com sucesso.&quot;,&quot;lostEquipment&quot;:&quot;True&quot;,&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;gpon_024681&quot;,&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;enderecoCDO&quot;,&quot;value&quot;:&quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;},{&quot;name&quot;:&quot;producer_olt&quot;,&quot;value&quot;:&quot;HUAWEI&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.O:45&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;},{&quot;name&quot;:&quot;estacao&quot;,&quot;value&quot;:&quot;BEL&quot;},{&quot;name&quot;:&quot;cnl&quot;,&quot;value&quot;:&quot;CBF&quot;},{&quot;name&quot;:&quot;olt&quot;,&quot;value&quot;:&quot;MA-CTO04-GHUA&quot;},{&quot;name&quot;:&quot;primaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEO-15\/1&quot;},{&quot;name&quot;:&quot;secondaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEOS-165&quot;}]}}}}}}
+
+10:24:50.907 response time in milliseconds: 21
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:50 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.3:90]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.3:90]</span>
+                <span class="scenario-name">Test successful closing notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>37</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.3:90]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.3:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="3.21">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2023-03-10T16:45:00Z&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;sub_369258&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;ord_147852&quot;,
+      &quot;correlationOrder&quot;: &quot;corr_963741&quot;,
+      &quot;associatedDocument&quot;: &quot;doc_258147&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;description&quot;: &quot;Ordem encerrada com sucesso.&quot;,
+      &quot;lostEquipment&quot;: False,
+      &quot;resource&quot;: {
+        &quot;gponAccess&quot;: &quot;gpon_852963&quot;,
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: {
+            &quot;item&quot;: [
+              {
+                &quot;name&quot;: &quot;enderecoCDO&quot;,
+                &quot;value&quot;: &quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;
+              },
+              {
+                &quot;name&quot;: &quot;producer_olt&quot;, 
+                &quot;value&quot;: &quot;HUAWEI&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.O:45&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;estacao&quot;,
+                &quot;value&quot;: &quot;BEL&quot;
+              },
+              {
+                &quot;name&quot;: &quot;cnl&quot;,
+                &quot;value&quot;: &quot;CBF&quot;
+              },
+              {
+                &quot;name&quot;: &quot;olt&quot;,
+                &quot;value&quot;: &quot;MA-CTO04-GHUA&quot;
+              },
+              {
+                &quot;name&quot;: &quot;primaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEO-15/1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;secondaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEOS-165&quot;  
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">26</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.86">10:24:50.954 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 825
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2023-03-10T16:45:00Z&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;sub_369258&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;ord_147852&quot;,&quot;correlationOrder&quot;:&quot;corr_963741&quot;,&quot;associatedDocument&quot;:&quot;doc_258147&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;Ordem encerrada com sucesso.&quot;,&quot;lostEquipment&quot;:&quot;False&quot;,&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;gpon_852963&quot;,&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;enderecoCDO&quot;,&quot;value&quot;:&quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;},{&quot;name&quot;:&quot;producer_olt&quot;,&quot;value&quot;:&quot;HUAWEI&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.O:45&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;},{&quot;name&quot;:&quot;estacao&quot;,&quot;value&quot;:&quot;BEL&quot;},{&quot;name&quot;:&quot;cnl&quot;,&quot;value&quot;:&quot;CBF&quot;},{&quot;name&quot;:&quot;olt&quot;,&quot;value&quot;:&quot;MA-CTO04-GHUA&quot;},{&quot;name&quot;:&quot;primaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEO-15\/1&quot;},{&quot;name&quot;:&quot;secondaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEOS-165&quot;}]}}}}}}
+
+10:24:50.972 response time in milliseconds: 16
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:50 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.4:90]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.4:90]</span>
+                <span class="scenario-name">Test successful closing notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>20</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.4:90]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.4:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.4:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.4:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.4:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="4.21">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2023-04-05T11:00:15Z&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;sub_159753&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;ord_654123&quot;,
+      &quot;correlationOrder&quot;: &quot;corr_287539&quot;,
+      &quot;associatedDocument&quot;: &quot;doc_314725&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;description&quot;: &quot;Ordem encerrada com sucesso.&quot;,
+      &quot;lostEquipment&quot;: True,
+      &quot;resource&quot;: {
+        &quot;gponAccess&quot;: &quot;gpon_741236&quot;,
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: {
+            &quot;item&quot;: [
+              {
+                &quot;name&quot;: &quot;enderecoCDO&quot;,
+                &quot;value&quot;: &quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;
+              },
+              {
+                &quot;name&quot;: &quot;producer_olt&quot;, 
+                &quot;value&quot;: &quot;HUAWEI&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.O:45&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;estacao&quot;,
+                &quot;value&quot;: &quot;BEL&quot;
+              },
+              {
+                &quot;name&quot;: &quot;cnl&quot;,
+                &quot;value&quot;: &quot;CBF&quot;
+              },
+              {
+                &quot;name&quot;: &quot;olt&quot;,
+                &quot;value&quot;: &quot;MA-CTO04-GHUA&quot;
+              },
+              {
+                &quot;name&quot;: &quot;primaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEO-15/1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;secondaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEOS-165&quot;  
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="4.86">10:24:51.007 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 824
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2023-04-05T11:00:15Z&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;sub_159753&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;ord_654123&quot;,&quot;correlationOrder&quot;:&quot;corr_287539&quot;,&quot;associatedDocument&quot;:&quot;doc_314725&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;Ordem encerrada com sucesso.&quot;,&quot;lostEquipment&quot;:&quot;True&quot;,&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;gpon_741236&quot;,&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;enderecoCDO&quot;,&quot;value&quot;:&quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;},{&quot;name&quot;:&quot;producer_olt&quot;,&quot;value&quot;:&quot;HUAWEI&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.O:45&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;},{&quot;name&quot;:&quot;estacao&quot;,&quot;value&quot;:&quot;BEL&quot;},{&quot;name&quot;:&quot;cnl&quot;,&quot;value&quot;:&quot;CBF&quot;},{&quot;name&quot;:&quot;olt&quot;,&quot;value&quot;:&quot;MA-CTO04-GHUA&quot;},{&quot;name&quot;:&quot;primaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEO-15\/1&quot;},{&quot;name&quot;:&quot;secondaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEOS-165&quot;}]}}}}}}
+
+10:24:51.016 response time in milliseconds: 8
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.5:90]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.5:90]</span>
+                <span class="scenario-name">Test successful closing notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>25</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.5:90]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.5:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.5:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.5:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.5:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="5.21">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2023-05-25T14:20:45Z&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;sub_753951&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;ord_321987&quot;,
+      &quot;correlationOrder&quot;: &quot;corr_654789&quot;,
+      &quot;associatedDocument&quot;: &quot;doc_789654&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;description&quot;: &quot;Ordem encerrada com sucesso.&quot;,
+      &quot;lostEquipment&quot;: False,
+      &quot;resource&quot;: {
+        &quot;gponAccess&quot;: &quot;gpon_369147&quot;,
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: {
+            &quot;item&quot;: [
+              {
+                &quot;name&quot;: &quot;enderecoCDO&quot;,
+                &quot;value&quot;: &quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;
+              },
+              {
+                &quot;name&quot;: &quot;producer_olt&quot;, 
+                &quot;value&quot;: &quot;HUAWEI&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.O:45&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;estacao&quot;,
+                &quot;value&quot;: &quot;BEL&quot;
+              },
+              {
+                &quot;name&quot;: &quot;cnl&quot;,
+                &quot;value&quot;: &quot;CBF&quot;
+              },
+              {
+                &quot;name&quot;: &quot;olt&quot;,
+                &quot;value&quot;: &quot;MA-CTO04-GHUA&quot;
+              },
+              {
+                &quot;name&quot;: &quot;primaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEO-15/1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;secondaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEOS-165&quot;  
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">20</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="5.86">10:24:51.039 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 825
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2023-05-25T14:20:45Z&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;sub_753951&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;ord_321987&quot;,&quot;correlationOrder&quot;:&quot;corr_654789&quot;,&quot;associatedDocument&quot;:&quot;doc_789654&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;Ordem encerrada com sucesso.&quot;,&quot;lostEquipment&quot;:&quot;False&quot;,&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;gpon_369147&quot;,&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;enderecoCDO&quot;,&quot;value&quot;:&quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;},{&quot;name&quot;:&quot;producer_olt&quot;,&quot;value&quot;:&quot;HUAWEI&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.O:45&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;},{&quot;name&quot;:&quot;estacao&quot;,&quot;value&quot;:&quot;BEL&quot;},{&quot;name&quot;:&quot;cnl&quot;,&quot;value&quot;:&quot;CBF&quot;},{&quot;name&quot;:&quot;olt&quot;,&quot;value&quot;:&quot;MA-CTO04-GHUA&quot;},{&quot;name&quot;:&quot;primaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEO-15\/1&quot;},{&quot;name&quot;:&quot;secondaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEOS-165&quot;}]}}}}}}
+
+10:24:51.055 response time in milliseconds: 14
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.6:90]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.6:90]</span>
+                <span class="scenario-name">Test successful closing notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>30</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.6:90]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.6:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.6:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.6:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.6:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="6.21">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2023-06-12T08:10:00Z&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;sub_951357&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;ord_456123&quot;,
+      &quot;correlationOrder&quot;: &quot;corr_789456&quot;,
+      &quot;associatedDocument&quot;: &quot;doc_123987&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;description&quot;: &quot;Ordem encerrada com sucesso.&quot;,
+      &quot;lostEquipment&quot;: True,
+      &quot;resource&quot;: {
+        &quot;gponAccess&quot;: &quot;gpon_258369&quot;,
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: {
+            &quot;item&quot;: [
+              {
+                &quot;name&quot;: &quot;enderecoCDO&quot;,
+                &quot;value&quot;: &quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;
+              },
+              {
+                &quot;name&quot;: &quot;producer_olt&quot;, 
+                &quot;value&quot;: &quot;HUAWEI&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.O:45&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;estacao&quot;,
+                &quot;value&quot;: &quot;BEL&quot;
+              },
+              {
+                &quot;name&quot;: &quot;cnl&quot;,
+                &quot;value&quot;: &quot;CBF&quot;
+              },
+              {
+                &quot;name&quot;: &quot;olt&quot;,
+                &quot;value&quot;: &quot;MA-CTO04-GHUA&quot;
+              },
+              {
+                &quot;name&quot;: &quot;primaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEO-15/1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;secondaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEOS-165&quot;  
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">25</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="6.86">10:24:51.078 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 824
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2023-06-12T08:10:00Z&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;sub_951357&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;ord_456123&quot;,&quot;correlationOrder&quot;:&quot;corr_789456&quot;,&quot;associatedDocument&quot;:&quot;doc_123987&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;Ordem encerrada com sucesso.&quot;,&quot;lostEquipment&quot;:&quot;True&quot;,&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;gpon_258369&quot;,&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;enderecoCDO&quot;,&quot;value&quot;:&quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;},{&quot;name&quot;:&quot;producer_olt&quot;,&quot;value&quot;:&quot;HUAWEI&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.O:45&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;},{&quot;name&quot;:&quot;estacao&quot;,&quot;value&quot;:&quot;BEL&quot;},{&quot;name&quot;:&quot;cnl&quot;,&quot;value&quot;:&quot;CBF&quot;},{&quot;name&quot;:&quot;olt&quot;,&quot;value&quot;:&quot;MA-CTO04-GHUA&quot;},{&quot;name&quot;:&quot;primaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEO-15\/1&quot;},{&quot;name&quot;:&quot;secondaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEOS-165&quot;}]}}}}}}
+
+10:24:51.093 response time in milliseconds: 13
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.7:90]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.7:90]</span>
+                <span class="scenario-name">Test successful closing notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>46</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.7:90]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.7:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.7:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.7:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.7:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">8</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="7.21">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2023-07-18T17:55:30Z&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;sub_147258&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;ord_963852&quot;,
+      &quot;correlationOrder&quot;: &quot;corr_321654&quot;,
+      &quot;associatedDocument&quot;: &quot;doc_456321&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;description&quot;: &quot;Ordem encerrada com sucesso.&quot;,
+      &quot;lostEquipment&quot;: False,
+      &quot;resource&quot;: {
+        &quot;gponAccess&quot;: &quot;gpon_147852&quot;,
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: {
+            &quot;item&quot;: [
+              {
+                &quot;name&quot;: &quot;enderecoCDO&quot;,
+                &quot;value&quot;: &quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;
+              },
+              {
+                &quot;name&quot;: &quot;producer_olt&quot;, 
+                &quot;value&quot;: &quot;HUAWEI&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.O:45&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;estacao&quot;,
+                &quot;value&quot;: &quot;BEL&quot;
+              },
+              {
+                &quot;name&quot;: &quot;cnl&quot;,
+                &quot;value&quot;: &quot;CBF&quot;
+              },
+              {
+                &quot;name&quot;: &quot;olt&quot;,
+                &quot;value&quot;: &quot;MA-CTO04-GHUA&quot;
+              },
+              {
+                &quot;name&quot;: &quot;primaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEO-15/1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;secondaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEOS-165&quot;  
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">33</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="7.86">10:24:51.132 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 825
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2023-07-18T17:55:30Z&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;sub_147258&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;ord_963852&quot;,&quot;correlationOrder&quot;:&quot;corr_321654&quot;,&quot;associatedDocument&quot;:&quot;doc_456321&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;Ordem encerrada com sucesso.&quot;,&quot;lostEquipment&quot;:&quot;False&quot;,&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;gpon_147852&quot;,&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;enderecoCDO&quot;,&quot;value&quot;:&quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;},{&quot;name&quot;:&quot;producer_olt&quot;,&quot;value&quot;:&quot;HUAWEI&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.O:45&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;},{&quot;name&quot;:&quot;estacao&quot;,&quot;value&quot;:&quot;BEL&quot;},{&quot;name&quot;:&quot;cnl&quot;,&quot;value&quot;:&quot;CBF&quot;},{&quot;name&quot;:&quot;olt&quot;,&quot;value&quot;:&quot;MA-CTO04-GHUA&quot;},{&quot;name&quot;:&quot;primaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEO-15\/1&quot;},{&quot;name&quot;:&quot;secondaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEOS-165&quot;}]}}}}}}
+
+10:24:51.159 response time in milliseconds: 26
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.8:90]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.8:90]</span>
+                <span class="scenario-name">Test successful closing notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>29</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.8:90]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.8:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.8:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.8:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.8:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="8.21">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2023-08-03T12:40:15Z&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;sub_654789&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;ord_258741&quot;,
+      &quot;correlationOrder&quot;: &quot;corr_147963&quot;,
+      &quot;associatedDocument&quot;: &quot;doc_369258&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;description&quot;: &quot;Ordem encerrada com sucesso.&quot;,
+      &quot;lostEquipment&quot;: True,
+      &quot;resource&quot;: {
+        &quot;gponAccess&quot;: &quot;gpon_951753&quot;,
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: {
+            &quot;item&quot;: [
+              {
+                &quot;name&quot;: &quot;enderecoCDO&quot;,
+                &quot;value&quot;: &quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;
+              },
+              {
+                &quot;name&quot;: &quot;producer_olt&quot;, 
+                &quot;value&quot;: &quot;HUAWEI&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.O:45&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;estacao&quot;,
+                &quot;value&quot;: &quot;BEL&quot;
+              },
+              {
+                &quot;name&quot;: &quot;cnl&quot;,
+                &quot;value&quot;: &quot;CBF&quot;
+              },
+              {
+                &quot;name&quot;: &quot;olt&quot;,
+                &quot;value&quot;: &quot;MA-CTO04-GHUA&quot;
+              },
+              {
+                &quot;name&quot;: &quot;primaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEO-15/1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;secondaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEOS-165&quot;  
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">24</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="8.86">10:24:51.181 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 824
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2023-08-03T12:40:15Z&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;sub_654789&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;ord_258741&quot;,&quot;correlationOrder&quot;:&quot;corr_147963&quot;,&quot;associatedDocument&quot;:&quot;doc_369258&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;Ordem encerrada com sucesso.&quot;,&quot;lostEquipment&quot;:&quot;True&quot;,&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;gpon_951753&quot;,&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;enderecoCDO&quot;,&quot;value&quot;:&quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;},{&quot;name&quot;:&quot;producer_olt&quot;,&quot;value&quot;:&quot;HUAWEI&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.O:45&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;},{&quot;name&quot;:&quot;estacao&quot;,&quot;value&quot;:&quot;BEL&quot;},{&quot;name&quot;:&quot;cnl&quot;,&quot;value&quot;:&quot;CBF&quot;},{&quot;name&quot;:&quot;olt&quot;,&quot;value&quot;:&quot;MA-CTO04-GHUA&quot;},{&quot;name&quot;:&quot;primaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEO-15\/1&quot;},{&quot;name&quot;:&quot;secondaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEOS-165&quot;}]}}}}}}
+
+10:24:51.200 response time in milliseconds: 17
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.9:90]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.9:90]</span>
+                <span class="scenario-name">Test successful closing notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>29</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.9:90]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.9:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.9:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.9:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.9:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="9.21">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2023-09-29T10:05:45Z&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;sub_321654&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;ord_741852&quot;,
+      &quot;correlationOrder&quot;: &quot;corr_369258&quot;,
+      &quot;associatedDocument&quot;: &quot;doc_654123&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;description&quot;: &quot;Ordem encerrada com sucesso.&quot;,
+      &quot;lostEquipment&quot;: False,
+      &quot;resource&quot;: {
+        &quot;gponAccess&quot;: &quot;gpon_753951&quot;,
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: {
+            &quot;item&quot;: [
+              {
+                &quot;name&quot;: &quot;enderecoCDO&quot;,
+                &quot;value&quot;: &quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;
+              },
+              {
+                &quot;name&quot;: &quot;producer_olt&quot;, 
+                &quot;value&quot;: &quot;HUAWEI&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.O:45&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;estacao&quot;,
+                &quot;value&quot;: &quot;BEL&quot;
+              },
+              {
+                &quot;name&quot;: &quot;cnl&quot;,
+                &quot;value&quot;: &quot;CBF&quot;
+              },
+              {
+                &quot;name&quot;: &quot;olt&quot;,
+                &quot;value&quot;: &quot;MA-CTO04-GHUA&quot;
+              },
+              {
+                &quot;name&quot;: &quot;primaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEO-15/1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;secondaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEOS-165&quot;  
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">22</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="9.86">10:24:51.222 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 825
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2023-09-29T10:05:45Z&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;sub_321654&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;ord_741852&quot;,&quot;correlationOrder&quot;:&quot;corr_369258&quot;,&quot;associatedDocument&quot;:&quot;doc_654123&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;Ordem encerrada com sucesso.&quot;,&quot;lostEquipment&quot;:&quot;False&quot;,&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;gpon_753951&quot;,&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;enderecoCDO&quot;,&quot;value&quot;:&quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;},{&quot;name&quot;:&quot;producer_olt&quot;,&quot;value&quot;:&quot;HUAWEI&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.O:45&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;},{&quot;name&quot;:&quot;estacao&quot;,&quot;value&quot;:&quot;BEL&quot;},{&quot;name&quot;:&quot;cnl&quot;,&quot;value&quot;:&quot;CBF&quot;},{&quot;name&quot;:&quot;olt&quot;,&quot;value&quot;:&quot;MA-CTO04-GHUA&quot;},{&quot;name&quot;:&quot;primaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEO-15\/1&quot;},{&quot;name&quot;:&quot;secondaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEOS-165&quot;}]}}}}}}
+
+10:24:51.240 response time in milliseconds: 16
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.10:90]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.10:90]</span>
+                <span class="scenario-name">Test successful closing notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>26</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.10:90]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.10:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.10:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.10:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.10:90]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="10.21">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2023-10-22T15:30:00Z&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;sub_789456&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;ord_369852&quot;,
+      &quot;correlationOrder&quot;: &quot;corr_147258&quot;,
+      &quot;associatedDocument&quot;: &quot;doc_951753&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;description&quot;: &quot;Ordem encerrada com sucesso.&quot;,
+      &quot;lostEquipment&quot;: True,
+      &quot;resource&quot;: {
+        &quot;gponAccess&quot;: &quot;gpon_654789&quot;,
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: {
+            &quot;item&quot;: [
+              {
+                &quot;name&quot;: &quot;enderecoCDO&quot;,
+                &quot;value&quot;: &quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;
+              },
+              {
+                &quot;name&quot;: &quot;producer_olt&quot;, 
+                &quot;value&quot;: &quot;HUAWEI&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.O:45&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;estacao&quot;,
+                &quot;value&quot;: &quot;BEL&quot;
+              },
+              {
+                &quot;name&quot;: &quot;cnl&quot;,
+                &quot;value&quot;: &quot;CBF&quot;
+              },
+              {
+                &quot;name&quot;: &quot;olt&quot;,
+                &quot;value&quot;: &quot;MA-CTO04-GHUA&quot;
+              },
+              {
+                &quot;name&quot;: &quot;primaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEO-15/1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;secondaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEOS-165&quot;  
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">21</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="10.86">10:24:51.259 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 824
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2023-10-22T15:30:00Z&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;sub_789456&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;ord_369852&quot;,&quot;correlationOrder&quot;:&quot;corr_147258&quot;,&quot;associatedDocument&quot;:&quot;doc_951753&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;Ordem encerrada com sucesso.&quot;,&quot;lostEquipment&quot;:&quot;True&quot;,&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;gpon_654789&quot;,&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;enderecoCDO&quot;,&quot;value&quot;:&quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;},{&quot;name&quot;:&quot;producer_olt&quot;,&quot;value&quot;:&quot;HUAWEI&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.O:45&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;},{&quot;name&quot;:&quot;estacao&quot;,&quot;value&quot;:&quot;BEL&quot;},{&quot;name&quot;:&quot;cnl&quot;,&quot;value&quot;:&quot;CBF&quot;},{&quot;name&quot;:&quot;olt&quot;,&quot;value&quot;:&quot;MA-CTO04-GHUA&quot;},{&quot;name&quot;:&quot;primaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEO-15\/1&quot;},{&quot;name&quot;:&quot;secondaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEOS-165&quot;}]}}}}}}
+
+10:24:51.273 response time in milliseconds: 12
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:92]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:92]</span>
+                <span class="scenario-name">Test cancel notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>38</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:92]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:92]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:92]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:92]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:92]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.93">
+      <div class="step-ref passed">93</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.94">
+      <div class="step-ref passed">94</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.94">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2021-09-29T18:42:24.641-03:00&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;234567654&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;20230315000001&quot;,
+      &quot;correlationOrder&quot;: &quot;10&quot;,
+      &quot;associatedDocument&quot;: &quot;VTT001&quot;,
+      &quot;type&quot;: &quot;Cancelamento&quot;,
+      &quot;code&quot;: &quot;2&quot;,
+      &quot;description&quot;: &quot;Ordem cancelada&quot;
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.113">
+      <div class="step-ref passed">113</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">20</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.113">10:24:51.292 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 248
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2021-09-29T18:42:24.641-03:00&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;234567654&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;,&quot;correlationOrder&quot;:&quot;10&quot;,&quot;associatedDocument&quot;:&quot;VTT001&quot;,&quot;type&quot;:&quot;Cancelamento&quot;,&quot;code&quot;:&quot;2&quot;,&quot;description&quot;:&quot;Ordem cancelada&quot;}}}
+
+10:24:51.308 response time in milliseconds: 15
+1 &lt; 400
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; sl-violations: [{&quot;location&quot;:[&quot;request&quot;,&quot;body&quot;,&quot;notification&quot;,&quot;date&quot;],&quot;severity&quot;:&quot;Error&quot;,&quot;code&quot;:&quot;maxLength&quot;,&quot;message&quot;:&quot;Request body property notification.date must NOT have more than 25 characters&quot;}]
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+1 &lt; Content-Length: 0
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.114">
+      <div class="step-ref failed">114</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell failed">13</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.114">10:24:51.329 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:114
+Then status 204
+status code was: 400, expected: 204, response time in milliseconds: 15, url: http://localhost:4010/listener/productOrderStateChangeEvent, response: 
+
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:114
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:116]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:116]</span>
+                <span class="scenario-name">Test ONT already in use notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>27</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:116]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:116]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:116]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:116]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:116]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.117">
+      <div class="step-ref passed">117</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.118">
+      <div class="step-ref passed">118</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.118">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2021-10-26T17:53:25.497-03:00&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;234567654&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;20230315000001&quot;,
+      &quot;correlationOrder&quot;: &quot;10&quot;,
+      &quot;associatedDocument&quot;: &quot;VTT001&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;-1&quot;,
+      &quot;description&quot;: &quot;O Equipamento já está em uso por outro cliente&quot;,
+      &quot;lostEquipment&quot;: true,
+      &quot;resource&quot;: {
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: &quot;&quot;
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.143">
+      <div class="step-ref passed">143</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">22</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.143">10:24:51.352 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 341
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2021-10-26T17:53:25.497-03:00&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;234567654&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;,&quot;correlationOrder&quot;:&quot;10&quot;,&quot;associatedDocument&quot;:&quot;VTT001&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;-1&quot;,&quot;description&quot;:&quot;O Equipamento já está em uso por outro cliente&quot;,&quot;lostEquipment&quot;:true,&quot;resource&quot;:{&quot;fiberPath&quot;:{&quot;items&quot;:&quot;&quot;}}}}}
+
+10:24:51.368 response time in milliseconds: 14
+1 &lt; 400
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; sl-violations: [{&quot;location&quot;:[&quot;request&quot;,&quot;body&quot;,&quot;notification&quot;,&quot;date&quot;],&quot;severity&quot;:&quot;Error&quot;,&quot;code&quot;:&quot;maxLength&quot;,&quot;message&quot;:&quot;Request body property notification.date must NOT have more than 25 characters&quot;},{&quot;location&quot;:[&quot;request&quot;,&quot;body&quot;,&quot;notification&quot;,&quot;order&quot;,&quot;lostEquipment&quot;],&quot;severity&quot;:&quot;Error&quot;,&quot;code&quot;:&quot;enum&quot;,&quot;message&quot;:&quot;Request body property notification.order.lostEquipment must be equal to one of the allowed values: True, False&quot;},{&quot;location&quot;:[&quot;request&quot;,&quot;body&quot;,&quot;notification&quot;,&quot;order&quot;,&quot;lostEquipment&quot;],&quot;severity&quot;:&quot;Error&quot;,&quot;code&quot;:&quot;type&quot;,&quot;message&quot;:&quot;Request body property notification.order.lostEquipment must be string&quot;}]
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+1 &lt; Content-Length: 0
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.144">
+      <div class="step-ref failed">144</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.144">10:24:51.371 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:144
+Then status 204
+status code was: 400, expected: 204, response time in milliseconds: 14, url: http://localhost:4010/listener/productOrderStateChangeEvent, response: 
+
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:144
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:146]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:146]</span>
+                <span class="scenario-name">Test closing notification with ontOwner Vtal - Install</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>21</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:146]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:146]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:146]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:146]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:146]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.147">
+      <div class="step-ref passed">147</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.148">
+      <div class="step-ref passed">148</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.148">{
+  &quot;notification&quot;: {
+    &quot;date&quot;: &quot;2022-12-26T12:15:35.174-03:00&quot;,
+    &quot;customer&quot;: {
+      &quot;subscriberId&quot;: &quot;234567654&quot;
+    },
+    &quot;order&quot;: {
+      &quot;id&quot;: &quot;20230315000001&quot;,
+      &quot;correlationOrder&quot;: &quot;10&quot;,
+      &quot;associatedDocument&quot;: &quot;VTT001&quot;,
+      &quot;type&quot;: &quot;Encerramento&quot;,
+      &quot;code&quot;: &quot;0&quot;,
+      &quot;description&quot;: &quot;BA de campo encerrado com sucesso&quot;,
+      &quot;resource&quot;: {
+        &quot;gponAccess&quot;: &quot;A000009QS&quot;,
+        &quot;devices&quot;: {
+          &quot;device&quot;: [
+            {
+              &quot;category&quot;: &quot;ONT&quot;,
+              &quot;type&quot;: &quot;PhsysicalResource&quot;,
+              &quot;description&quot;: &quot;Equipment - ONT device&quot;,
+              &quot;state&quot;: &quot;completed&quot;,
+              &quot;usageState&quot;: &quot;active&quot;,
+              &quot;startOperatingDate&quot;: &quot;2022-12-26T12:15:35.174-03:00&quot;,
+              &quot;resourceCharacteristic&quot;: [
+                {
+                  &quot;name&quot;: &quot;serialNumber&quot;,
+                  &quot;value&quot;: &quot;0251990119989&quot;
+                },
+                {
+                  &quot;name&quot;: &quot;firmware&quot;,
+                  &quot;value&quot;: &quot;FW-XPTO-123&quot;
+                },
+                {
+                  &quot;name&quot;: &quot;manufacturer&quot;,
+                  &quot;value&quot;: &quot;Sagemcom&quot;
+                },
+                {
+                  &quot;name&quot;: &quot;model&quot;,
+                  &quot;value&quot;: &quot;F@ST 5340 TFN&quot;
+                }
+              ]
+            }
+          ]
+        },
+        &quot;fiberPath&quot;: {
+          &quot;items&quot;: {
+            &quot;item&quot;: [
+              {
+                &quot;name&quot;: &quot;enderecoCDO&quot;,
+                &quot;value&quot;: &quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;
+              },
+              {
+                &quot;name&quot;: &quot;producer_olt&quot;,
+                &quot;value&quot;: &quot;HUAWEI&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.O:45&quot;
+              },
+              {
+                &quot;name&quot;: &quot;CDO&quot;,
+                &quot;value&quot;: &quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;estacao&quot;,
+                &quot;value&quot;: &quot;BEL&quot;
+              },
+              {
+                &quot;name&quot;: &quot;cnl&quot;,
+                &quot;value&quot;: &quot;CBF&quot;
+              },
+              {
+                &quot;name&quot;: &quot;olt&quot;,
+                &quot;value&quot;: &quot;MA-CTO04-GHUA&quot;
+              },
+              {
+                &quot;name&quot;: &quot;primaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEO-15/1&quot;
+              },
+              {
+                &quot;name&quot;: &quot;secondaryCable&quot;,
+                &quot;value&quot;: &quot;MA.CTO.F-7.CEOS-165&quot;
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.242">
+      <div class="step-ref passed">242</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.242">10:24:51.387 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 1207
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2022-12-26T12:15:35.174-03:00&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;234567654&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;,&quot;correlationOrder&quot;:&quot;10&quot;,&quot;associatedDocument&quot;:&quot;VTT001&quot;,&quot;type&quot;:&quot;Encerramento&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;BA de campo encerrado com sucesso&quot;,&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;A000009QS&quot;,&quot;devices&quot;:{&quot;device&quot;:[{&quot;category&quot;:&quot;ONT&quot;,&quot;type&quot;:&quot;PhsysicalResource&quot;,&quot;description&quot;:&quot;Equipment - ONT device&quot;,&quot;state&quot;:&quot;completed&quot;,&quot;usageState&quot;:&quot;active&quot;,&quot;startOperatingDate&quot;:&quot;2022-12-26T12:15:35.174-03:00&quot;,&quot;resourceCharacteristic&quot;:[{&quot;name&quot;:&quot;serialNumber&quot;,&quot;value&quot;:&quot;0251990119989&quot;},{&quot;name&quot;:&quot;firmware&quot;,&quot;value&quot;:&quot;FW-XPTO-123&quot;},{&quot;name&quot;:&quot;manufacturer&quot;,&quot;value&quot;:&quot;Sagemcom&quot;},{&quot;name&quot;:&quot;model&quot;,&quot;value&quot;:&quot;F@ST 5340 TFN&quot;}]}]},&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;enderecoCDO&quot;,&quot;value&quot;:&quot;RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913&quot;},{&quot;name&quot;:&quot;producer_olt&quot;,&quot;value&quot;:&quot;HUAWEI&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.O:45&quot;},{&quot;name&quot;:&quot;CDO&quot;,&quot;value&quot;:&quot;CDOI-4704-PTP.FO.I:S32_2_IN 1&quot;},{&quot;name&quot;:&quot;estacao&quot;,&quot;value&quot;:&quot;BEL&quot;},{&quot;name&quot;:&quot;cnl&quot;,&quot;value&quot;:&quot;CBF&quot;},{&quot;name&quot;:&quot;olt&quot;,&quot;value&quot;:&quot;MA-CTO04-GHUA&quot;},{&quot;name&quot;:&quot;primaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEO-15\/1&quot;},{&quot;name&quot;:&quot;secondaryCable&quot;,&quot;value&quot;:&quot;MA.CTO.F-7.CEOS-165&quot;}]}}}}}}
+
+10:24:51.400 response time in milliseconds: 12
+1 &lt; 400
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; sl-violations: [{&quot;location&quot;:[&quot;request&quot;,&quot;body&quot;,&quot;notification&quot;,&quot;date&quot;],&quot;severity&quot;:&quot;Error&quot;,&quot;code&quot;:&quot;maxLength&quot;,&quot;message&quot;:&quot;Request body property notification.date must NOT have more than 25 characters&quot;}]
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+1 &lt; Content-Length: 0
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.243">
+      <div class="step-ref failed">243</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.243">10:24:51.402 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:243
+Then status 204
+status code was: 400, expected: 204, response time in milliseconds: 12, url: http://localhost:4010/listener/productOrderStateChangeEvent, response: 
+
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:243
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.1:252]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.1:252]</span>
+                <span class="scenario-name">Test error responses</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>19</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.1:252]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.1:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.1:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.1:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.1:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.246">
+      <div class="step-ref passed">246</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.247">
+      <div class="step-ref passed">247</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.248">
+      <div class="step-ref passed">248</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">15</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.248">10:24:51.427 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{}
+
+10:24:51.438 response time in milliseconds: 10
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.249">
+      <div class="step-ref failed">249</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status {&quot;code&quot;:&quot;7013&quot;,&quot;description&quot;:&quot;Pendência Cancelamento por Inviabilidade Técnica&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.249">10:24:51.440 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+Then status {&quot;code&quot;:&quot;7013&quot;,&quot;description&quot;:&quot;Pendência Cancelamento por Inviabilidade Técnica&quot;}
+no step-definition method match found for: status {&quot;code&quot;:&quot;7013&quot;,&quot;description&quot;:&quot;Pendência Cancelamento por Inviabilidade Técnica&quot;}
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.2:252]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.2:252]</span>
+                <span class="scenario-name">Test error responses</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>18</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.2:252]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.2:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.2:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.2:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.2:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.246">
+      <div class="step-ref passed">246</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.247">
+      <div class="step-ref passed">247</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.248">
+      <div class="step-ref passed">248</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">15</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.248">10:24:51.455 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{}
+
+10:24:51.467 response time in milliseconds: 9
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.249">
+      <div class="step-ref failed">249</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status {&quot;code&quot;:&quot;7018&quot;,&quot;description&quot;:&quot;Pendência de Rede 3 dias&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.249">10:24:51.469 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+Then status {&quot;code&quot;:&quot;7018&quot;,&quot;description&quot;:&quot;Pendência de Rede 3 dias&quot;}
+no step-definition method match found for: status {&quot;code&quot;:&quot;7018&quot;,&quot;description&quot;:&quot;Pendência de Rede 3 dias&quot;}
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.3:252]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.3:252]</span>
+                <span class="scenario-name">Test error responses</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>24</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.3:252]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.3:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.3:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.3:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.3:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.246">
+      <div class="step-ref passed">246</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.247">
+      <div class="step-ref passed">247</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.248">
+      <div class="step-ref passed">248</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">19</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.248">10:24:51.487 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{}
+
+10:24:51.501 response time in milliseconds: 13
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.249">
+      <div class="step-ref failed">249</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status {&quot;code&quot;:&quot;7029&quot;,&quot;description&quot;:&quot;Pendência Agendamento&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.249">10:24:51.503 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+Then status {&quot;code&quot;:&quot;7029&quot;,&quot;description&quot;:&quot;Pendência Agendamento&quot;}
+no step-definition method match found for: status {&quot;code&quot;:&quot;7029&quot;,&quot;description&quot;:&quot;Pendência Agendamento&quot;}
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.4:252]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.4:252]</span>
+                <span class="scenario-name">Test error responses</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>24</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.4:252]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.4:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.4:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.4:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.4:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.246">
+      <div class="step-ref passed">246</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.247">
+      <div class="step-ref passed">247</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.248">
+      <div class="step-ref passed">248</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">20</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="4.248">10:24:51.519 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{}
+
+10:24:51.534 response time in milliseconds: 15
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.249">
+      <div class="step-ref failed">249</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status {&quot;code&quot;:&quot;7037&quot;,&quot;description&quot;:&quot;Pendência Impedimento de Atividade por Chuva&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="4.249">10:24:51.536 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+Then status {&quot;code&quot;:&quot;7037&quot;,&quot;description&quot;:&quot;Pendência Impedimento de Atividade por Chuva&quot;}
+no step-definition method match found for: status {&quot;code&quot;:&quot;7037&quot;,&quot;description&quot;:&quot;Pendência Impedimento de Atividade por Chuva&quot;}
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.5:252]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.5:252]</span>
+                <span class="scenario-name">Test error responses</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>19</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.5:252]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.5:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.5:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.5:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.5:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.246">
+      <div class="step-ref passed">246</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.247">
+      <div class="step-ref passed">247</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.248">
+      <div class="step-ref passed">248</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">15</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="5.248">10:24:51.551 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{}
+
+10:24:51.562 response time in milliseconds: 9
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.249">
+      <div class="step-ref failed">249</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status {&quot;code&quot;:&quot;7047&quot;,&quot;description&quot;:&quot;Pendência Acesso Impossibilitado&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="5.249">10:24:51.564 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+Then status {&quot;code&quot;:&quot;7047&quot;,&quot;description&quot;:&quot;Pendência Acesso Impossibilitado&quot;}
+no step-definition method match found for: status {&quot;code&quot;:&quot;7047&quot;,&quot;description&quot;:&quot;Pendência Acesso Impossibilitado&quot;}
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.6:252]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.6:252]</span>
+                <span class="scenario-name">Test error responses</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>19</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.6:252]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.6:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.6:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.6:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.6:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.246">
+      <div class="step-ref passed">246</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.247">
+      <div class="step-ref passed">247</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.248">
+      <div class="step-ref passed">248</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">15</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="6.248">10:24:51.579 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{}
+
+10:24:51.590 response time in milliseconds: 10
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.249">
+      <div class="step-ref failed">249</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status {&quot;code&quot;:&quot;7053&quot;,&quot;description&quot;:&quot;Pendência de Aprovisionamento 5 dias&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="6.249">10:24:51.592 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+Then status {&quot;code&quot;:&quot;7053&quot;,&quot;description&quot;:&quot;Pendência de Aprovisionamento 5 dias&quot;}
+no step-definition method match found for: status {&quot;code&quot;:&quot;7053&quot;,&quot;description&quot;:&quot;Pendência de Aprovisionamento 5 dias&quot;}
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.7:252]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.7:252]</span>
+                <span class="scenario-name">Test error responses</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>21</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.7:252]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.7:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.7:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.7:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.7:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.246">
+      <div class="step-ref passed">246</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.247">
+      <div class="step-ref passed">247</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.248">
+      <div class="step-ref passed">248</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">17</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="7.248">10:24:51.609 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{}
+
+10:24:51.622 response time in milliseconds: 11
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.249">
+      <div class="step-ref failed">249</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status {&quot;code&quot;:&quot;7065&quot;,&quot;description&quot;:&quot;Pendência Local Fechado&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="7.249">10:24:51.624 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+Then status {&quot;code&quot;:&quot;7065&quot;,&quot;description&quot;:&quot;Pendência Local Fechado&quot;}
+no step-definition method match found for: status {&quot;code&quot;:&quot;7065&quot;,&quot;description&quot;:&quot;Pendência Local Fechado&quot;}
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.8:252]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.8:252]</span>
+                <span class="scenario-name">Test error responses</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>18</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.8:252]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.8:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.8:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.8:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.8:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.246">
+      <div class="step-ref passed">246</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.247">
+      <div class="step-ref passed">247</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.248">
+      <div class="step-ref passed">248</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">15</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="8.248">10:24:51.638 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{}
+
+10:24:51.649 response time in milliseconds: 10
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.249">
+      <div class="step-ref failed">249</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status {&quot;code&quot;:&quot;7071&quot;,&quot;description&quot;:&quot;Pendência Área de Risco Indeterminada 15 dias&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="8.249">10:24:51.650 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+Then status {&quot;code&quot;:&quot;7071&quot;,&quot;description&quot;:&quot;Pendência Área de Risco Indeterminada 15 dias&quot;}
+no step-definition method match found for: status {&quot;code&quot;:&quot;7071&quot;,&quot;description&quot;:&quot;Pendência Área de Risco Indeterminada 15 dias&quot;}
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.9:252]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.9:252]</span>
+                <span class="scenario-name">Test error responses</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>23</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.9:252]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.9:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.9:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.9:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.9:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.246">
+      <div class="step-ref passed">246</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.247">
+      <div class="step-ref passed">247</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.248">
+      <div class="step-ref passed">248</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">19</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="9.248">10:24:51.664 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{}
+
+10:24:51.680 response time in milliseconds: 13
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.249">
+      <div class="step-ref failed">249</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status {&quot;code&quot;:&quot;7078&quot;,&quot;description&quot;:&quot;Pendência Cancelamento por Desistência do Serviço&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="9.249">10:24:51.682 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+Then status {&quot;code&quot;:&quot;7078&quot;,&quot;description&quot;:&quot;Pendência Cancelamento por Desistência do Serviço&quot;}
+no step-definition method match found for: status {&quot;code&quot;:&quot;7078&quot;,&quot;description&quot;:&quot;Pendência Cancelamento por Desistência do Serviço&quot;}
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[5.10:252]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[5.10:252]</span>
+                <span class="scenario-name">Test error responses</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>21</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[5.10:252]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[5.10:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.10:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.10:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[5.10:252]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure headers = { &#39;Authorization&#39;: &#39;#(authToken)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.246">
+      <div class="step-ref passed">246</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderStateChangeEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.247">
+      <div class="step-ref passed">247</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.248">
+      <div class="step-ref passed">248</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">17</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="10.248">10:24:51.696 request:
+1 &gt; POST http://localhost:4010/listener/productOrderStateChangeEvent
+1 &gt; Authorization: dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{}
+
+10:24:51.709 response time in milliseconds: 12
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Fri, 24 May 2024 10:24:51 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.249">
+      <div class="step-ref failed">249</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status {&quot;code&quot;:&quot;7083&quot;,&quot;description&quot;:&quot;Pendência Cliente Não Solicitou Instalação&quot;}</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="10.249">10:24:51.711 src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+Then status {&quot;code&quot;:&quot;7083&quot;,&quot;description&quot;:&quot;Pendência Cliente Não Solicitou Instalação&quot;}
+no step-definition method match found for: status {&quot;code&quot;:&quot;7083&quot;,&quot;description&quot;:&quot;Pendência Cliente Não Solicitou Instalação&quot;}
+src/test/java/com/bootexample4/api_tests/listener_productOrderStateChangeEvent_post.feature:249
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
