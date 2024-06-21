@@ -1,0 +1,5 @@
+scenario,requestBody,expectedStatus
+"Closing Notification","closingNotification","204"
+"Cancel Notification","cancelNotification","204"
+"ONT already in use","ontAlreadyInUse","204"
+"Closing Notification (ontOwner Vtal - Install)","closingNotificationOntOwner","204"
