@@ -1,0 +1,551 @@
+openapi: 3.0.0
+servers:
+  # Added by API Auto Mocking Plugin
+  # Added by API Auto Mocking Plugin
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/Qlue/IPFront/1.0.0
+  - description: SwaggerHub API Auto Mocking
+    url: https://qule.ipfront.co.jp/
+  - description: ETown Development Server
+    url: https://dev-api-etown.qlue.id/
+info:
+  description: This is a Documentation API, to integrated Etown Township Management System with Ai computer vision provide by IP Front
+  version: "1.0.0"
+  title: Integration API between IP Front Cloud Server and Etown
+  contact:
+    email: andre@qlue.id
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: IPFront
+    description: API Interface on DM Server
+  - name: ETown 
+    description: API for IP Front Cloud Integration(Server to Server)
+  - name: Mobile
+    description: API for Mobile Android and IOS App
+paths:
+  /GetStatus:
+    get:
+      tags:
+        - IPFront
+      summary: Get the status of device Jetson Nano including the Cameras
+      operationId: getStatus
+      description: |
+        By passing in the appropriate options, you can get the device status,
+        registration status and the online status
+      parameters:
+      - name: params
+        in: query
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                JetsonID:
+                  type: string
+      responses:
+        '200':
+          description: Result OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceStatus'
+        '400':
+          description: Bad Request
+        '500':
+          description: Parameter Error         
+  /RegisterJetsonboxid:
+    post:
+      tags:
+        - IPFront
+      summary: Register Houseid and Password to DMServer
+      operationId: regDevice
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      parameters:
+      - name: params
+        in: query
+        required: true
+        schema:
+          type: object
+          properties:
+            jetson_uuid:
+              type: "string"
+            username:
+              type: "string"
+            clusterId:
+              type: "string"
+            houseId:
+              type: "string"
+      responses:
+        '200':
+          description: Result OK
+        '400':
+          description: Bad Request
+        '500':
+          description: Parameter Error  
+  /GetRTSPURL:
+    get:
+      tags:
+        - IPFront
+      summary: Get the rtsp link of each camera
+      operationId: getRTSP
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      parameters:
+      - name: params
+        in: query
+        required: true
+        schema:
+          type: object
+          properties:
+            jetson_uuid:
+              type: "string"
+            cameraId:
+              type: "string"
+      responses:
+        '200':
+          description: Result OK
+        '400':
+          description: Bad Request
+        '500':
+          description: Parameter Error  
+
+  /StopRTSP:
+    get:
+      tags:
+        - IPFront
+      summary: Stop the rtsp link of each camera
+      operationId: stopRTSP
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      parameters:
+      - name: params
+        in: query
+        required: true
+        schema:
+          type: object
+          properties:
+            JetsonID:
+              type: object
+              properties:
+                jetson_id:
+                type: "string"
+            camera_id:
+              type: "string"
+      responses:
+        '200':
+          description: Result OK
+        '400':
+          description: Bad Request
+        '500':
+          description: Parameter Error  
+          
+  /SetCamera:
+    post:
+      tags:
+        - IPFront
+      summary: Set parameter to the specific camera based on applied feature
+      operationId: setCamera
+      description: Adds an item to the system
+      parameters:
+      - name: params
+        in: query
+        required: true
+        schema:
+          type: object
+          properties:
+            jetson_id:
+              type: "string"
+      responses:
+        '200':
+          description: Result OK
+        '400':
+          description: Bad Request
+        '500':
+          description: Parameter Error  
+ 
+        
+  /api/device/alert:
+    post:
+      tags:
+        - ETown
+      summary : Send device online/offline status to user via etown
+      operationId: deviceAlert
+      description: send alert related to device online offline status
+      responses:
+        '201':
+          description: alert created
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceAlert'
+        description: Parameter needed to create cameras alert to ETown
+  /api/device/camera/alert:
+    post:
+      tags:
+        - ETown
+      summary : Send camera online/offline status to  user via etown
+      operationId: cameraAlert
+      description: Adds an item to the system
+      responses:
+        '201':
+          description: alert created
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CameraAlert'
+        description: Parameter needed to create cameras alert to ETown
+  /api/device/camera/feature/alert:
+    post:
+      tags:
+        - ETown
+      summary : Send notification related to ai recognition to alert user via etown
+      operationId: featureAlert
+      description: Adds an item to the system
+      responses:
+        '201':
+          description: alert created
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FeatureAlert'
+        description: Parameter needed to create cameras alert to ETown
+  /device/list:
+    get:
+      tags:
+        - Mobile
+      summary: Get the device list that registered with the house
+      operationId: deviceList
+      description: |
+        By passing in the appropriate options, you can list for
+        available device in the house
+      parameters:
+      - name: params
+        in: query
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                houseId:
+                  type: string
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceList'
+        '400':
+          description: bad input parameter
+  /device/camera/list:
+    get:
+      tags:
+        - Mobile
+      summary: Get the camera list from the device
+      operationId: cameraList
+      description: |
+        By passing in the appropriate options, you can list for
+        available camera in the house
+      parameters:
+      - name: params
+        in: query
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jetson_uuid:
+                  type: string
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CameraList'
+        '400':
+          description: bad input parameter
+  /device/camera/stream:
+    get:
+      tags:
+        - Mobile
+      summary: Get the camera stream that connected to device
+      operationId: cameraStream
+      description: |
+        By passing in the appropriate options, you can list for
+        available camera in the house
+      parameters:
+      - name: params
+        in: query
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                jetson_uuid:
+                  type: string
+                cameraId:
+                  type: string
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CameraStream'
+        '400':
+          description: bad input parameter
+  /device/camera/alert/history:
+    get:
+      tags:
+        - Mobile
+      summary: Get the rtsp link of each camera
+      operationId: cameraAlertHistory
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      parameters:
+      - name: params
+        in: query
+        required: true
+        schema:
+          type: object
+          properties:
+            jetson_uuid:
+              type: "string"
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CameraParam'
+        '400':
+          description: bad input parameter
+        
+components:
+  schemas:
+    DeviceStatus:
+      type: object
+      required:
+        - sn
+        - firmware
+        - regStatus
+        - lastOnline
+        - noCamera
+        - Cameras
+      properties:
+        sn:
+          type: string
+          example: 0904H210008
+        firmware:
+          type: string
+          example: 1.200.30
+        regStatus:
+          type: string
+          example: Registered
+        lastOnline:
+          type: string
+          format: date-time
+          example: '2023-11-29T09:12:33.001Z'
+        noCamera:
+          type: integer
+          example: 3
+        cameras:
+          $ref: '#/components/schemas/Cameras'  
+    Cameras:
+      type: array
+      items:
+        type: object
+        properties:
+          no:
+            type: integer
+          id:
+            type: string
+          status:
+            type: string
+          lastOnline:
+            type: string
+            format: date-time
+      example:  
+        - no: 1
+          id: 9a48824e-829d-11ee-b962-0242ac120002
+          status: online
+          lastOnline: '2023-11-29T09:12:33.001Z'
+        - no: 2
+          id: bb791d8e-829d-11ee-b962-0242ac120002
+          status: online
+          lastOnline: '2023-11-29T09:12:33.001Z'
+        - no: 3
+          id: c79794c4-829d-11ee-b962-0242ac120002
+          status: online
+          lastOnline: '2023-11-29T09:12:33.001Z'
+    CameraParam:
+      type: object
+      required:
+        - jetson_uuid
+        - cameraNo
+        - CameraId
+        - feature
+      properties:
+        jetson_uuid:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        cameraNo:
+          type: integer
+          example: 1
+        cameraId:
+          type: string
+          example: 9a48824e-829d-11ee-b962-0242ac12000
+        feature:
+          type: string
+          example: fire detection
+        coordinates:
+          $ref: '#/components/schemas/CameraRoi'
+    CameraRoi:
+      type: string
+      example: 
+        - 0,0
+        - 100,0
+        - 100,100
+        - 0,100
+    FeatureAlert:
+      type: object
+      required:
+      - sn
+      properties:
+        sn:
+          type: string
+          example: 0904H210008
+        cameraId:
+          type: string
+          example: c79794c4-829d-11ee-b962-0242ac120002
+        timestamp:
+          type: string
+          format: date-time
+          example: '2023-11-29T09:12:33.001Z'
+        confidence:
+          type: number
+          example: 0.67
+        alert:
+          type: string
+          example: 'intrusion'
+        subAlert:
+          type: string
+          example: 'person'
+        photoUrl: 
+          type: string
+          example: 'video'
+        videoUrl:
+          type: string
+          format: url
+          example: 'https://ipfront.com'
+    DeviceAlert:
+      type: object
+      required:
+      - jetson_uuid
+      properties:
+        jetson_uuid:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        status:
+          type: string
+          example: offline
+        timestamp:
+          type: string
+          format: date-time
+          example: '2023-11-29T09:12:33.001Z'
+    CameraAlert:
+      type: object
+      required:
+      - jetson_uuid
+      properties:
+        jetson_uuid:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        camera_id: 
+          type: string
+          example: 9a48824e-829d-11ee-b962-0242ac120002
+        status:
+          type: string
+          example: offline
+        timestamp:
+          type: string
+          format: date-time
+          example: '2023-11-29T09:12:33.001Z'
+    DeviceList:
+      type : array
+      items:
+        type: object
+        properties:
+          jetson_uuid:
+            type: string
+      example:  
+        - no: 1
+          jetson_uuid: 9a48824e-829d-11ee-b962-0242ac120002
+          status: online
+        - no: 2
+          jetson_uuid: bb791d8e-829d-11ee-b962-0242ac120002
+          status: online
+        - no: 3
+          jetson_uuid: c79794c4-829d-11ee-b962-0242ac120002
+          status: online
+    CameraList:
+      type : array
+      items:
+        type: object
+        properties:
+          no:
+            type: integer
+          id:
+            type: string
+          status:
+            type: string
+      example:  
+        - no: 1
+          id: 9a48824e-829d-11ee-b962-0242ac120002
+          status: online
+        - no: 2
+          id: bb791d8e-829d-11ee-b962-0242ac120002
+          status: online
+        - no: 3
+          id: c79794c4-829d-11ee-b962-0242ac120002
+          status: online
+    CameraStream:
+      type: object
+      properties:
+        jetson_uuid:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        status:
+          type: string
+          example: online
+        rtsp:
+          type: string
+          example: 'rtsp://rtsp.ipfont.com/'

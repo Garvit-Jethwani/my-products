@@ -1,0 +1,4580 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "BankAssist Core Banking Specification",
+    "description" : "BankAssist Core Banking Specification",
+    "version" : "1.0"
+  },
+  "servers" : [ {
+    "url" : "https://localhost:4012/smt"
+  } ],
+  "security" : [ {
+    "bearerAuth" : [ ]
+  } ],
+  "tags" : [ {
+    "name" : "Accounts",
+    "description" : "account related information"
+  }, {
+    "name" : "Customers",
+    "description" : "customer information"
+  }, {
+    "name" : "Transactions",
+    "description" : "Customer Transactions"
+  }, {
+    "name" : "Transfer",
+    "description" : "transfer related information"
+  }, {
+    "name" : "SecureMessage",
+    "description" : "secure message related"
+  }, {
+    "name" : "IVR Authentication",
+    "description" : "Authentication APIs for IVR channel"
+  } ],
+  "paths" : {
+    "/deposit" : {
+      "post" : {
+        "tags" : [ "Accounts" ],
+        "summary" : "deposit",
+        "description" : "Make a check deposit on a user's account",
+        "operationId" : "deposit",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/depositRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Deposit success",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/GetAccountInfo" : {
+      "post" : {
+        "tags" : [ "Accounts" ],
+        "summary" : "GetAccountInfo",
+        "description" : "fetch customer account details",
+        "operationId" : "GetAccountInfo",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-Auth-token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-CORRELATION-ID",
+          "in" : "header",
+          "schema" : {
+            "type" : "number"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/accountRequest"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/getAccountData"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/UpdateAccountInfo" : {
+      "put" : {
+        "tags" : [ "Accounts" ],
+        "summary" : "UpdateAccountInfo",
+        "description" : "Update customer account details",
+        "operationId" : "UpdateAccountInfo",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-Auth-token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-CORRELATION-ID",
+          "in" : "header",
+          "schema" : {
+            "type" : "number"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/updateaccountRequest"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/GetCustomerInfo" : {
+      "post" : {
+        "tags" : [ "Customers" ],
+        "summary" : "GetCustomerInfo",
+        "description" : "fetch customer information",
+        "operationId" : "GetCustomerInfo",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-Auth-token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-CORRELATION-ID",
+          "in" : "header",
+          "schema" : {
+            "type" : "number"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/CustomerRequest"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetCustomerData"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "request body"
+      }
+    },
+    "/UpdateCustomerInfo" : {
+      "put" : {
+        "tags" : [ "Customers" ],
+        "summary" : "UpdateCustomerInfo",
+        "description" : "Update customer information",
+        "operationId" : "UpdateCustomerInfo",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-Auth-token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-CORRELATION-ID",
+          "in" : "header",
+          "schema" : {
+            "type" : "number"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/updateCustomerRequest"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "request body"
+      }
+    },
+    "/GetTransactions" : {
+      "post" : {
+        "tags" : [ "Transactions" ],
+        "summary" : "GetTransactions",
+        "description" : "Fetch transactions information",
+        "operationId" : "GetTransactions",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-Auth-token",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "X-CORRELATION-ID",
+          "in" : "header",
+          "schema" : {
+            "type" : "number"
+          }
+        } ],
+        "requestBody" : {
+          "description" : "Transaction Request",
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/GetTransactionsReq"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/GetTransactionsRes"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "Body"
+      }
+    },
+    "/TransferFunds" : {
+      "post" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "TransferFunds",
+        "description" : "Transfers funds between accounts",
+        "operationId" : "TransferFunds",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "userCode",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/transferRequest"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Transaction success",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/GetScheduleTransfers" : {
+      "post" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "GetScheduleTransfers",
+        "description" : "Fetches the scheduled transfers",
+        "operationId" : "GetScheduleTransfers",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "userCode",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/transferScheduleListRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "schedule transfer list response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/transferScheduleListResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/UpdateScheduleTransfers" : {
+      "put" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "UpdateScheduleTransfers",
+        "description" : "Update the scheduled transfers",
+        "operationId" : "UpdateScheduleTransfers",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "userCode",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/transferScheduleUpdateRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Scheduled transfer updated successfully",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/DeleteScheduleTransfers" : {
+      "post" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "DeleteScheduleTransfers",
+        "description" : "Delete the scheduled transfer",
+        "operationId" : "DeleteScheduleTransfers",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "userCode",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/deleteScheduleTransferRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Scheduled transfer deleted successfully",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/AddRecurringTransfers" : {
+      "post" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "AddRecurringTransfers",
+        "description" : "Adds the recurring transfers",
+        "operationId" : "AddRecurringTransfers",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "userCode",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/transferRecurringAddRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "schedule transfer added successfully",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/GetRecurringTransfers" : {
+      "post" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "GetRecurringTransfers",
+        "description" : "Fetches all the recurring transfers",
+        "operationId" : "GetRecurringTransfers",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "userCode",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/transferRecurringListRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "schedule transfer list response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/transferRecurringListResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/UpdateRecurringTransfers" : {
+      "put" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "UpdateRecurringTransfers",
+        "description" : "Update the recurring transfers",
+        "operationId" : "UpdateRecurringTransfers",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "userCode",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/transferRecurringUpdateRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recurring transfer updated successfully",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/DeleteRecurringTransfers" : {
+      "post" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "DeleteRecurringTransfers",
+        "description" : "Delete the recurring transfers",
+        "operationId" : "DeleteRecurringTransfers",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "userCode",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/deleteRecurringTransferRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Recurring transfer deleted successfully",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/resetPassword" : {
+      "post" : {
+        "tags" : [ "Customers" ],
+        "summary" : "resetPassword",
+        "description" : "It allows to reset the password",
+        "operationId" : "resetPassword",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/resetpasswordBody"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "password has been updated successfully.",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/disputeTransaction" : {
+      "post" : {
+        "tags" : [ "Transactions" ],
+        "summary" : "disputeTransaction",
+        "description" : "dispute a transaction",
+        "operationId" : "disputeTransaction",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/disputeRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Dispute Transactions reported successfully",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/ccPay" : {
+      "post" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "ccPay",
+        "description" : "to pay cc bill",
+        "operationId" : "ccPay",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/ccRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Credit Card payment scheduled successfully",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/GetCCSchedule" : {
+      "post" : {
+        "tags" : [ "Transfer" ],
+        "summary" : "GetCCSchedule",
+        "description" : "Fetch cc payment list",
+        "operationId" : "GetCCSchedule",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/ccScheduleRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "schedule transfer list response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/CCListResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/sendsecuremessage" : {
+      "post" : {
+        "tags" : [ "SecureMessage" ],
+        "summary" : "sendsecuremessage",
+        "description" : "send secure message",
+        "operationId" : "sendsecuremessage",
+        "parameters" : [ {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/SecureMessageRequest"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "success",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/locateProfile" : {
+      "post" : {
+        "tags" : [ "Customers" ],
+        "summary" : "locateProfile",
+        "description" : "get profile details",
+        "operationId" : "locateProfile",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/locateProfileRequest"
+              }
+            }
+          },
+          "required" : true
+        },
+        "responses" : {
+          "200" : {
+            "description" : "success",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/locateProfileResponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/debitcardInfoValidation" : {
+      "post" : {
+        "tags" : [ "Customers" ],
+        "summary" : "debitcardInfoValidation",
+        "description" : "for validating card info",
+        "operationId" : "debitcardInfoValidation",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/debitcardInfobody"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Validated Successfully",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/personalInfoValidation" : {
+      "post" : {
+        "tags" : [ "Customers" ],
+        "summary" : "personalInfoValidation",
+        "description" : "for validating personal info",
+        "operationId" : "personalInfoValidation",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/personalInfobody"
+              }
+            }
+          },
+          "required" : false
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Validated Successfully",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        },
+        "x-codegen-request-body-name" : "body"
+      }
+    },
+    "/validateExistingUser" : {
+      "post" : {
+        "tags" : [ "IVR Authentication" ],
+        "summary" : "to validate the existing user",
+        "description" : "to validate the in of existing user",
+        "operationId" : "validateUser",
+        "parameters" : [ {
+          "name" : "botId",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/existinguser"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "PINs Matched",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/validatePIN" : {
+      "post" : {
+        "tags" : [ "IVR Authentication" ],
+        "summary" : "Validates PIN",
+        "description" : "Validates PIN",
+        "operationId" : "validatePIN",
+        "parameters" : [ {
+          "name" : "botId",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/newuser"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "PINs Matched",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/validatePINRules" : {
+      "post" : {
+        "tags" : [ "IVR Authentication" ],
+        "summary" : "Validates PIN by defined rules",
+        "description" : "to validate if pin entered by new user follows pin rules",
+        "operationId" : "validatePINRules",
+        "parameters" : [ {
+          "name" : "botId",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/newuserpinrules"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "PINs Matched",
+            "content" : { }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/deeplink" : {
+      "post" : {
+        "tags" : [ "Deeplink" ],
+        "summary" : "to fetch the deeplink",
+        "description" : "to fetch the deeplink",
+        "operationId" : "getDeeplink",
+        "parameters" : [ {
+          "name" : "koreUserId",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "botId",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "accountId",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "tenantId",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "Authorization",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "environment",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        }, {
+          "name" : "channel",
+          "in" : "header",
+          "required" : false,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "$ref" : "#/components/schemas/deeplink"
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "success",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/deeplinkresponse"
+                }
+              }
+            }
+          },
+          "401" : {
+            "description" : "Error: Authorisation failed.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          },
+          "404" : {
+            "description" : "Error: Not Found",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/err"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "err" : {
+        "type" : "object",
+        "properties" : {
+          "err" : {
+            "$ref" : "#/components/schemas/err_err"
+          }
+        }
+      },
+      "deeplink" : {
+        "type" : "object",
+        "properties" : {
+          "usecase" : {
+            "type" : "array",
+            "description" : "addbeneficiary,accountclosurestatus_followup,travel_followup,fundtransferstatusinquiry,transferfunds",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        },
+        "example" : {
+          "usecase" : [ "addbeneficiary" ]
+        }
+      },
+      "deeplinkresponse" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/deeplinkresponse_inner"
+        },
+        "example" : [ {
+          "usecase" : "addbeneficiary",
+          "link" : "www.google.com",
+          "linkType" : "deeplink"
+        } ]
+      },
+      "deeplinkresponse_inner" : {
+        "type" : "object",
+        "properties" : {
+          "usecase" : {
+            "type" : "string"
+          },
+          "link" : {
+            "type" : "string",
+            "description" : "URL"
+          },
+          "linkType" : {
+            "type" : "string",
+            "description" : "deeplink,weburl,internalurl are enums"
+          }
+        }
+      },
+      "newuser" : {
+        "type" : "object",
+        "properties" : {
+          "sourcePin" : {
+            "type" : "string"
+          },
+          "targetPin" : {
+            "type" : "string"
+          },
+          "profileInfo" : {
+            "$ref" : "#/components/schemas/profileInfoObj"
+          }
+        },
+        "example" : {
+          "sourcePin" : "1357#",
+          "targetPin" : "1357#",
+          "profileInfo" : {
+            "customerId" : 12345,
+            "accountNumber" : 1045301,
+            "ssn" : 123456
+          }
+        }
+      },
+      "existinguser" : {
+        "type" : "object",
+        "properties" : {
+          "sourcePin" : {
+            "type" : "string"
+          },
+          "targetPin" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "sourcePin" : "5aa5836c710427cfc7b48d3f58cd5779",
+          "targetPin" : "1357#"
+        }
+      },
+      "newuserpinrules" : {
+        "type" : "object",
+        "properties" : {
+          "sourcePin" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "sourcePin" : "1357#"
+        }
+      },
+      "getAccountData" : {
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number"
+          },
+          "accounts" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/getAccountData_accounts"
+            }
+          }
+        },
+        "example" : {
+          "customerId" : 1045300,
+          "accounts" : [ {
+            "customerId" : 1045300,
+            "accountName" : "Savings Account",
+            "accountNickname" : "Vacation Fund",
+            "accountNumber" : 1043693,
+            "accountType" : "Savings Account",
+            "status" : "active",
+            "currency" : "USD",
+            "availableBalance" : 2256.93,
+            "currentBalance" : 20,
+            "minimumBalance" : 1500,
+            "statementDate" : "",
+            "activatedDate" : "01-01-2011",
+            "deactivatedDate" : "",
+            "lastUpdated" : "01-07-2019",
+            "image" : "",
+            "dueDate" : "",
+            "expiryDate" : "",
+            "personalBankerName" : "William Smith",
+            "personalBankerContact" : {
+              "email" : "William.Smith@bank.com",
+              "mobileNumber" : "(904) 236-2345"
+            },
+            "maxTransactionLimit" : 400000,
+            "userID" : "19ff1cd63a1be8ff",
+            "cardType" : "Discover",
+            "cardName" : "Wells Fargo",
+            "P2PLimit" : 300,
+            "CardStatus" : "",
+            "routingNumber" : 122105159,
+            "availableCashLimit" : 500,
+            "loanOriginationDate" : "",
+            "propertyAddress" : "",
+            "lastDrawDate" : "",
+            "productName" : "\"Boost Savings\"",
+            "productCode" : "MS02",
+            "loanMaturityDate" : "",
+            "location" : "172 W Flagler Street, Miami, Florida, 33130",
+            "email" : "test12@gmail.com",
+            "fdType" : "Short Term",
+            "phone" : 14085040880,
+            "expDate" : "",
+            "maturityDate" : "",
+            "internalTransferFromEnabled" : true,
+            "internalTransferToEnabled" : true,
+            "p2pEnabled" : true,
+            "paybillEnabled" : true,
+            "swiftCode" : "",
+            "branchName" : "",
+            "bankName" : "",
+            "isStatement" : false,
+            "isPrimaryMobileNumber" : false,
+            "isAlternateMobileNumber" : false,
+            "totalTenure" : "4",
+            "remainingTenure" : "1",
+            "debitAccountNumber" : "12345678",
+            "lateFee" : 10,
+            "bounceCharge" : 20,
+            "totalCharges" : 30,
+            "overDueAmount" : 15,
+            "id" : "34e3a9668a390a1a"
+          } ]
+        }
+      },
+      "CustomerRequest" : {
+        "required" : [ "customerId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          }
+        }
+      },
+      "accountRequest" : {
+        "required" : [ "customerId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          }
+        }
+      },
+      "GetCustomerData" : {
+        "type" : "object",
+        "properties" : {
+          "alternatePhoneNumber" : {
+            "type" : "number"
+          },
+          "customerId" : {
+            "type" : "string"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "identificationNumber" : {
+            "type" : "number"
+          },
+          "identificationType" : {
+            "type" : "string"
+          },
+          "image" : {
+            "type" : "string"
+          },
+          "isAlternateMobileNumber" : {
+            "type" : "boolean"
+          },
+          "isPrimaryMobileNumber" : {
+            "type" : "boolean"
+          },
+          "location" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "firstName" : {
+            "type" : "string"
+          },
+          "lastName" : {
+            "type" : "string"
+          },
+          "personalBanker" : {
+            "$ref" : "#/components/schemas/GetCustomerData_personalBanker"
+          },
+          "phone" : {
+            "type" : "number"
+          },
+          "securityQuestions" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "segmentId" : {
+            "type" : "number"
+          },
+          "userId" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "alternatePhoneNumber" : 14076073325,
+          "customerId" : 1045300,
+          "email" : "test@gmail.com",
+          "firstName" : "John",
+          "identificationType" : "",
+          "image" : "",
+          "isAlternateMobileNumber" : true,
+          "isPrimaryMobileNumber" : true,
+          "lastName" : "Jones",
+          "location" : "1234 Mickey Lane, Orlando, Florida, 12345",
+          "name" : "John",
+          "personalBanker" : {
+            "name" : "William Smith",
+            "email" : "William.Smith@bank.com",
+            "mobileNumber" : "(904) 236-2345"
+          },
+          "phone" : 14076073325,
+          "securityQuestions" : [ {
+            "Q" : "What is the name of the Grade School that you attended?",
+            "A" : "DJHS"
+          }, {
+            "Q" : "What is the name of your childhood best friend?",
+            "A" : "Sam"
+          } ],
+          "segmentId" : 1,
+          "userId" : "19ff1cd63a1be8ff",
+          "id" : "f1baa401274c3b29"
+        }
+      },
+      "securityResponse" : {
+        "type" : "object",
+        "properties" : {
+          "Q" : {
+            "type" : "string",
+            "example" : "What is the name of the Grade School that you attended?"
+          },
+          "A" : {
+            "type" : "string",
+            "example" : "DJHS"
+          }
+        }
+      },
+      "OTPRequest" : {
+        "required" : [ "customerId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          }
+        }
+      },
+      "verifyOTPbody" : {
+        "required" : [ "code", "customerId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "code" : {
+            "type" : "number",
+            "example" : 1234
+          }
+        }
+      },
+      "resetpinBody" : {
+        "required" : [ "accountNumber", "cardNumber", "cardPin", "customerId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "cardNumber" : {
+            "type" : "string",
+            "example" : "1234456778901690"
+          },
+          "accountNumber" : {
+            "type" : "string",
+            "example" : "1042345"
+          },
+          "cardPin" : {
+            "type" : "string",
+            "example" : "1111"
+          },
+          "allowLastThree" : {
+            "type" : "boolean",
+            "example" : false
+          }
+        }
+      },
+      "resetpasswordBody" : {
+        "required" : [ "password", "username" ],
+        "type" : "object",
+        "properties" : {
+          "username" : {
+            "type" : "string",
+            "example" : "John"
+          },
+          "password" : {
+            "type" : "string",
+            "example" : "1111"
+          }
+        }
+      },
+      "MetaInfo" : {
+        "title" : "MetaInfo",
+        "required" : [ "name", "value" ],
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "value" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "name" : "string",
+          "value" : "string"
+        }
+      },
+      "GetTransactionsReq" : {
+        "required" : [ "accountNumber" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "string"
+          },
+          "accountNumber" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "numOfTransactions" : {
+            "type" : "number"
+          },
+          "status" : {
+            "type" : "string"
+          },
+          "startDate" : {
+            "type" : "string",
+            "format" : "date"
+          },
+          "endDate" : {
+            "type" : "string",
+            "format" : "date"
+          },
+          "sort" : {
+            "$ref" : "#/components/schemas/GetTransactionsReq_sort"
+          },
+          "transactionAmount" : {
+            "$ref" : "#/components/schemas/GetTransactionsReq_transactionAmount"
+          },
+          "category" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/GetTransactionsReq_category"
+            }
+          },
+          "debitOrCredit" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "customerId" : 1045300,
+          "accountNumber" : [ "1045301" ],
+          "category" : [ {
+            "codeType" : "MCC",
+            "value" : [ [ 5811, 5814 ] ],
+            "source" : "Internal"
+          } ],
+          "startDate" : "2021-04-01T00:00:00.000+0000",
+          "endDate" : "2021-04-30T00:00:00.000+0000",
+          "status" : "Posted",
+          "transactionAmount" : {
+            "amount" : {
+              "gt" : 1000
+            },
+            "currency" : "USD"
+          }
+        }
+      },
+      "GetTransactionsRes" : {
+        "type" : "array",
+        "example" : [ {
+          "customerId" : 1045300,
+          "transactionId" : 999997,
+          "accountNumber" : "1042345",
+          "timestamp" : 1611772200000,
+          "amount" : 4.67,
+          "currency" : "USD",
+          "debitOrCredit" : "Debit",
+          "description" : "Starbucks #12676, Orlando FL",
+          "paymentMode" : "",
+          "DBANames" : "Starbucks",
+          "status" : "Posted",
+          "transactionType" : "1011",
+          "MCCCode" : 5812,
+          "name" : "",
+          "address" : "",
+          "street" : "",
+          "city" : "Orlando, FL",
+          "state" : "FL",
+          "zip" : "",
+          "country" : "",
+          "phoneNumber" : "",
+          "CCTier2Data" : "",
+          "receiverFirstName" : "",
+          "receiverLastName" : "",
+          "receiverBank" : "",
+          "receiverCountry" : "",
+          "senderFirstName" : "",
+          "senderLastName" : "",
+          "senderBank" : "",
+          "senderCountry" : "",
+          "id" : "e8613583a60688a4"
+        } ],
+        "items" : {
+          "$ref" : "#/components/schemas/GetTransactionsRes_sub"
+        }
+      },
+      "disputeRequest" : {
+        "required" : [ "customerId", "transactionsData" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "emailId" : {
+            "type" : "string",
+            "example" : "John@yahoo.com"
+          },
+          "transactionsData" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/disputeRequest_transactionsData"
+            }
+          }
+        }
+      },
+      "custAlertResponse" : {
+        "required" : [ "accountNumber", "alertType", "customerId", "notificationType" ],
+        "type" : "object",
+        "properties" : {
+          "alertType" : {
+            "type" : "string",
+            "example" : "Debit Card Online Use"
+          },
+          "notificationType" : {
+            "type" : "array",
+            "description" : "it can be either email or mobile or both",
+            "items" : {
+              "type" : "string",
+              "example" : "email, mobile"
+            }
+          },
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "accountNumber" : {
+            "type" : "string",
+            "example" : "1042345"
+          },
+          "meta" : {
+            "type" : "array",
+            "description" : "either amount & type or noOfDays or country is required in meta",
+            "items" : {
+              "$ref" : "#/components/schemas/custAlertResponse_meta"
+            }
+          }
+        }
+      },
+      "transferRequest" : {
+        "required" : [ "amount", "currency", "customerId", "date", "sourceAccountId", "targetAccountId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "amount" : {
+            "type" : "number",
+            "example" : 3
+          },
+          "currency" : {
+            "type" : "string",
+            "example" : "USD"
+          },
+          "sourceAccountId" : {
+            "type" : "string",
+            "example" : "1042345"
+          },
+          "targetAccountId" : {
+            "type" : "string",
+            "example" : "1042222"
+          },
+          "date" : {
+            "type" : "string",
+            "example" : "03-15-2021"
+          },
+          "description" : {
+            "type" : "string",
+            "description" : "Loans/Mortgage Payment for loan payments, for internal transfer transaction type and payment type do not exist",
+            "example" : "Internal Transfer"
+          },
+          "TransactionType" : {
+            "type" : "string",
+            "example" : "1063"
+          },
+          "PaymentType" : {
+            "type" : "string",
+            "description" : "it can be minimum or monthly or additional principal payment",
+            "example" : "Minimum Payment"
+          }
+        },
+        "description" : "transaction and payment type is for loan payments"
+      },
+      "transferScheduleListRequest" : {
+        "required" : [ "customerId", "status" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "status" : {
+            "type" : "string",
+            "example" : "Pending"
+          }
+        }
+      },
+      "transferScheduleListResponse" : {
+        "type" : "array",
+        "example" : [ {
+          "Type" : "Internal Transfer",
+          "CustomerId" : 1045300,
+          "Amount" : 11,
+          "SourceAccountNumber" : "1042222",
+          "TargetAccountNumber" : "1042345",
+          "DueDate" : "01/15/2021",
+          "Currency" : "USD",
+          "Status" : "Pending",
+          "ScheduledDate" : "1610668800000",
+          "NextScheduleDate" : "",
+          "id" : "97087c6c24788b1d"
+        } ],
+        "items" : {
+          "$ref" : "#/components/schemas/transferScheduleListResponse_sub"
+        }
+      },
+      "transferRecurringAddRequest" : {
+        "required" : [ "amount", "currency", "customerId", "sourceAccountId", "targetAccountId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number"
+          },
+          "amount" : {
+            "type" : "number"
+          },
+          "sourceAccountId" : {
+            "type" : "string"
+          },
+          "targetAccountId" : {
+            "type" : "string"
+          },
+          "currency" : {
+            "type" : "string"
+          },
+          "status" : {
+            "type" : "string"
+          },
+          "scheduledDate" : {
+            "type" : "number"
+          },
+          "recurringOptions" : {
+            "$ref" : "#/components/schemas/transferRecurringAddRequest_recurringOptions"
+          }
+        },
+        "example" : {
+          "customerId" : 1045304,
+          "amount" : 39,
+          "sourceAccountId" : "1042347",
+          "targetAccountId" : "1043699",
+          "currency" : "USD",
+          "status" : "Pending",
+          "scheduledDate" : 1616544000000,
+          "recurringOptions" : {
+            "amountType" : "Fixed",
+            "frequency" : {
+              "iterate" : "Weekly",
+              "duration" : {
+                "numberOfTransfers" : 3
+              }
+            }
+          }
+        }
+      },
+      "transferRecurringListRequest" : {
+        "required" : [ "customerId", "status" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045304
+          },
+          "status" : {
+            "type" : "string",
+            "example" : "Pending"
+          }
+        }
+      },
+      "transferRecurringListResponse" : {
+        "type" : "array",
+        "example" : [ {
+          "Type" : "Internal Recurring Transfer",
+          "CustomerId" : 1045304,
+          "Amount" : 39,
+          "SourceAccountNumber" : "1042347",
+          "TargetAccountNumber" : "1043699",
+          "Currency" : "USD",
+          "Status" : "Pending",
+          "ScheduledDate" : "1616544000000",
+          "recurringOptions" : {
+            "amountType" : "Fixed",
+            "frequency" : {
+              "iterate" : "Weekly",
+              "duration" : {
+                "numberOfTransfers" : 3
+              }
+            }
+          },
+          "id" : "c14e40aad900cb15"
+        } ],
+        "items" : {
+          "$ref" : "#/components/schemas/transferRecurringListResponse_sub"
+        }
+      },
+      "transferScheduleUpdateRequest" : {
+        "required" : [ "customerId", "paymentId" ],
+        "type" : "object",
+        "properties" : {
+          "paymentId" : {
+            "type" : "string"
+          },
+          "customerId" : {
+            "type" : "number"
+          },
+          "amount" : {
+            "type" : "number"
+          },
+          "scheduledDate" : {
+            "type" : "number",
+            "description" : "in terms of timestamp"
+          },
+          "sourceAccountId" : {
+            "type" : "string"
+          },
+          "targetAccountId" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "paymentId" : "97087c6c24788b1d",
+          "customerId" : 1045300,
+          "amount" : 5
+        }
+      },
+      "transferRecurringUpdateRequest" : {
+        "required" : [ "customerId", "paymentId" ],
+        "type" : "object",
+        "properties" : {
+          "paymentId" : {
+            "type" : "string"
+          },
+          "customerId" : {
+            "type" : "number"
+          },
+          "amount" : {
+            "type" : "number"
+          },
+          "scheduledDate" : {
+            "type" : "number",
+            "description" : "in terms of timestamp"
+          },
+          "sourceAccountId" : {
+            "type" : "string"
+          },
+          "targetAccountId" : {
+            "type" : "string"
+          },
+          "recurringOptions" : {
+            "$ref" : "#/components/schemas/transferRecurringUpdateRequest_recurringOptions"
+          }
+        },
+        "example" : {
+          "recurringOptions" : {
+            "amountType" : "Fixed",
+            "frequency" : {
+              "iterate" : "Weekly",
+              "duration" : {
+                "numberOfTransfers" : 3
+              }
+            },
+            "updateTransferType" : "Next"
+          },
+          "sourceAccountId" : "1042347",
+          "targetAccountId" : "1043699",
+          "scheduledDate" : 1617148800000,
+          "paymentId" : "744a77644d67e891",
+          "customerId" : 1045304
+        }
+      },
+      "deleteScheduleTransferRequest" : {
+        "required" : [ "customerId", "paymentId" ],
+        "type" : "object",
+        "properties" : {
+          "paymentId" : {
+            "type" : "string",
+            "example" : "97087c6c24788b1d"
+          },
+          "updateTransferType" : {
+            "type" : "string",
+            "example" : "all"
+          },
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          }
+        }
+      },
+      "deleteRecurringTransferRequest" : {
+        "required" : [ "customerId", "paymentId" ],
+        "type" : "object",
+        "properties" : {
+          "paymentId" : {
+            "type" : "string",
+            "example" : "744a77644d67e891"
+          },
+          "updateTransferType" : {
+            "type" : "string",
+            "example" : "all"
+          },
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045304
+          }
+        }
+      },
+      "ccRequest" : {
+        "required" : [ "amount", "currency", "customerId", "dueDate", "sourceAccountId", "targetAccountId", "transactionType" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number"
+          },
+          "amount" : {
+            "type" : "number"
+          },
+          "currency" : {
+            "type" : "string"
+          },
+          "sourceAccountId" : {
+            "type" : "string"
+          },
+          "targetAccountId" : {
+            "type" : "string"
+          },
+          "transactionType" : {
+            "type" : "number"
+          },
+          "dueDate" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "customerId" : 1045304,
+          "amount" : 300,
+          "currency" : "USD",
+          "sourceAccountId" : "1045302",
+          "targetAccountId" : "1042224",
+          "transactionType" : "1053",
+          "dueDate" : "2021-03-24T00:00:00.000+0000"
+        }
+      },
+      "ccScheduleRequest" : {
+        "required" : [ "customerId", "status" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "status" : {
+            "type" : "string",
+            "example" : "Pending"
+          }
+        }
+      },
+      "CCListResponse" : {
+        "type" : "array",
+        "example" : [ {
+          "Type" : "CC",
+          "CustomerId" : 1045304,
+          "Amount" : 300,
+          "SourceAccountNumber" : "1045302",
+          "TargetAccountNumber" : "1042224",
+          "DueDate" : 1616544000000,
+          "Currency" : "USD",
+          "Status" : "Pending",
+          "id" : "2e66c147a82618db"
+        } ],
+        "items" : {
+          "$ref" : "#/components/schemas/CCListResponse_sub"
+        }
+      },
+      "SecureMessageRequest" : {
+        "type" : "object",
+        "properties" : {
+          "authType" : {
+            "type" : "string",
+            "example" : "Authorized"
+          },
+          "firstName" : {
+            "type" : "string",
+            "example" : "James"
+          },
+          "lastName" : {
+            "type" : "string",
+            "example" : "William"
+          },
+          "email" : {
+            "type" : "string",
+            "example" : "James@gmail.com"
+          },
+          "phoneNumber" : {
+            "type" : "number",
+            "example" : 9787643445
+          },
+          "topic" : {
+            "type" : "string",
+            "example" : "Routing and Account Number"
+          },
+          "message" : {
+            "type" : "string",
+            "example" : "Unable to find my routing number."
+          },
+          "availableTime" : {
+            "type" : "string",
+            "example" : "nighttime"
+          },
+          "chatHistory" : {
+            "type" : "string",
+            "example" : "html formatted message sent as string"
+          },
+          "cif" : {
+            "type" : "number",
+            "example" : 1045310
+          }
+        }
+      },
+      "profileInfoObj" : {
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "string"
+          },
+          "accountNumber" : {
+            "type" : "string"
+          },
+          "ssn" : {
+            "type" : "string"
+          }
+        }
+      },
+      "postbudgetResponse" : {
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "duration" : {
+            "type" : "string",
+            "example" : "Monthly"
+          },
+          "currency" : {
+            "type" : "string",
+            "example" : "USD"
+          },
+          "thresholdType" : {
+            "type" : "string",
+            "example" : "both"
+          },
+          "amount" : {
+            "type" : "number",
+            "example" : 50
+          },
+          "category" : {
+            "$ref" : "#/components/schemas/postbudgetResponse_category"
+          },
+          "id" : {
+            "type" : "string",
+            "example" : "97f7cffa40e28adc"
+          }
+        }
+      },
+      "putBudgetRequest" : {
+        "required" : [ "customerId", "refId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "refId" : {
+            "type" : "string",
+            "example" : "97f7cffa40e28adc"
+          },
+          "budgetPercentage" : {
+            "type" : "string",
+            "example" : "50%"
+          },
+          "budgetAmount" : {
+            "$ref" : "#/components/schemas/putBudgetRequest_budgetAmount"
+          }
+        }
+      },
+      "addBudgetRequest" : {
+        "required" : [ "customerId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "duration" : {
+            "type" : "string",
+            "example" : "Monthly"
+          },
+          "thresholdType" : {
+            "type" : "string",
+            "example" : "Set up both"
+          },
+          "budgetAmount" : {
+            "$ref" : "#/components/schemas/addBudgetRequest_budgetAmount"
+          },
+          "category" : {
+            "$ref" : "#/components/schemas/addBudgetRequest_category"
+          }
+        }
+      },
+      "addSavingsGoalsRequest" : {
+        "required" : [ "customerId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "goalType" : {
+            "type" : "string",
+            "example" : "Monthly"
+          },
+          "fromAccount" : {
+            "type" : "string",
+            "example" : "1042345"
+          },
+          "toAccount" : {
+            "type" : "string",
+            "example" : "1042222"
+          },
+          "schedule" : {
+            "$ref" : "#/components/schemas/addSavingsGoalsRequest_schedule"
+          },
+          "payment" : {
+            "$ref" : "#/components/schemas/addSavingsGoalsRequest_payment"
+          },
+          "dayOfMonth" : {
+            "type" : "string",
+            "example" : "05/20/2020"
+          },
+          "dayOfWeek" : {
+            "type" : "string",
+            "example" : "Saturday"
+          },
+          "targetAmount" : {
+            "$ref" : "#/components/schemas/addSavingsGoalsRequest_targetAmount"
+          }
+        }
+      },
+      "depositRequest" : {
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "sourceAccountId" : {
+            "type" : "string",
+            "example" : "1042345"
+          },
+          "amount" : {
+            "type" : "string",
+            "example" : "1042222"
+          },
+          "currency" : {
+            "type" : "string",
+            "example" : "USD"
+          },
+          "image" : {
+            "$ref" : "#/components/schemas/depositRequest_image"
+          }
+        }
+      },
+      "updateaccountRequest" : {
+        "required" : [ "accountNumber", "customerId" ],
+        "type" : "object",
+        "properties" : {
+          "accountNumber" : {
+            "type" : "string",
+            "example" : "1042345"
+          },
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "email" : {
+            "type" : "string",
+            "example" : "John@gmail.com"
+          },
+          "alternatePhoneNumber" : {
+            "type" : "number"
+          },
+          "isAlternateMobileNumber" : {
+            "type" : "boolean"
+          },
+          "phone" : {
+            "type" : "number"
+          },
+          "isPrimaryMobileNumber" : {
+            "type" : "boolean"
+          },
+          "location" : {
+            "type" : "string"
+          },
+          "isStatement" : {
+            "type" : "boolean"
+          }
+        }
+      },
+      "updateCustomerRequest" : {
+        "required" : [ "customerId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "email" : {
+            "type" : "string",
+            "example" : "John@gmail.com"
+          },
+          "alternatePhoneNumber" : {
+            "type" : "number"
+          },
+          "isAlternateMobileNumber" : {
+            "type" : "boolean"
+          },
+          "phone" : {
+            "type" : "number"
+          },
+          "isPrimaryMobileNumber" : {
+            "type" : "boolean"
+          },
+          "location" : {
+            "type" : "string"
+          }
+        }
+      },
+      "travelDetailsRequest" : {
+        "type" : "object",
+        "properties" : {
+          "cardNumber" : {
+            "type" : "string",
+            "example" : "1234456778901234"
+          },
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "fromDate" : {
+            "type" : "string",
+            "example" : "2021-01-06T00:00:00.000+0000"
+          },
+          "toDate" : {
+            "type" : "string",
+            "example" : "2021-08-06T00:00:00.000+0000"
+          },
+          "city" : {
+            "type" : "string",
+            "example" : "NA"
+          },
+          "country" : {
+            "type" : "string",
+            "example" : "USA"
+          },
+          "firstName" : {
+            "type" : "string",
+            "example" : "John"
+          },
+          "lastName" : {
+            "type" : "string",
+            "example" : "Elm"
+          },
+          "phoneNumber" : {
+            "type" : "number",
+            "example" : 9787643445
+          }
+        }
+      },
+      "err_err" : {
+        "type" : "object",
+        "properties" : {
+          "message" : {
+            "type" : "string"
+          }
+        }
+      },
+      "getAccountData_personalBankerContact" : {
+        "type" : "object",
+        "properties" : {
+          "email" : {
+            "type" : "string"
+          },
+          "mobileNumber" : {
+            "type" : "string"
+          }
+        }
+      },
+      "getAccountData_accounts" : {
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number"
+          },
+          "accountName" : {
+            "type" : "string"
+          },
+          "accountNickname" : {
+            "type" : "string"
+          },
+          "accountNumber" : {
+            "type" : "string"
+          },
+          "accountType" : {
+            "type" : "string"
+          },
+          "activatedDate" : {
+            "type" : "string"
+          },
+          "availableBalance" : {
+            "type" : "number"
+          },
+          "availableCash" : {
+            "type" : "number"
+          },
+          "availableCashLimit" : {
+            "type" : "number"
+          },
+          "availableCredit" : {
+            "type" : "number"
+          },
+          "bankName" : {
+            "type" : "string",
+            "description" : "IDFC specific"
+          },
+          "branchName" : {
+            "type" : "string",
+            "description" : "IDFC specific"
+          },
+          "cardName" : {
+            "type" : "string"
+          },
+          "cardNumber" : {
+            "type" : "string"
+          },
+          "cardStatus" : {
+            "type" : "string",
+            "description" : "This can be any of these active, frozen, expired or blocked"
+          },
+          "cardType" : {
+            "type" : "string"
+          },
+          "creditLimit" : {
+            "type" : "number"
+          },
+          "currency" : {
+            "type" : "string"
+          },
+          "currentBalance" : {
+            "type" : "number"
+          },
+          "deactivatedDate" : {
+            "type" : "string"
+          },
+          "dueAmount" : {
+            "type" : "number"
+          },
+          "dueDate" : {
+            "type" : "string"
+          },
+          "earlyWithdrawalPenalty" : {
+            "type" : "number"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "expiryDate" : {
+            "type" : "string"
+          },
+          "expDate" : {
+            "type" : "string",
+            "description" : "It will be a number format lets say expiry is Dec2021, 1221 will be its value."
+          },
+          "fdType" : {
+            "type" : "string",
+            "description" : "idfc specific can be short term,  re-investment, quarterly payout, monthly. payout."
+          },
+          "image" : {
+            "type" : "string"
+          },
+          "interestRate" : {
+            "type" : "number"
+          },
+          "internalTransferFromEnabled" : {
+            "type" : "boolean"
+          },
+          "internalTransferToEnabled" : {
+            "type" : "boolean"
+          },
+          "isPrimaryMobile" : {
+            "type" : "boolean"
+          },
+          "isAlternateMobileNumber" : {
+            "type" : "boolean"
+          },
+          "isStatement" : {
+            "type" : "boolean"
+          },
+          "lastDrawDate" : {
+            "type" : "string"
+          },
+          "loanMaturityDate" : {
+            "type" : "string"
+          },
+          "loanOriginationDate" : {
+            "type" : "string"
+          },
+          "location" : {
+            "type" : "string"
+          },
+          "lastUpdated" : {
+            "type" : "string"
+          },
+          "maxTransactionLimit" : {
+            "type" : "string"
+          },
+          "maturityDate" : {
+            "type" : "string",
+            "description" : "its a date format"
+          },
+          "minimumPaymentDue" : {
+            "type" : "string"
+          },
+          "minimumBalance" : {
+            "type" : "string"
+          },
+          "monthlyPayment" : {
+            "type" : "number"
+          },
+          "openingBalance" : {
+            "type" : "number"
+          },
+          "originalLoanAmount" : {
+            "type" : "number"
+          },
+          "P2PLimit" : {
+            "type" : "number"
+          },
+          "p2pEnabled" : {
+            "type" : "number"
+          },
+          "paybillEnabled" : {
+            "type" : "boolean"
+          },
+          "payoffAmount" : {
+            "type" : "number"
+          },
+          "personalBankerName" : {
+            "type" : "string"
+          },
+          "personalBankerContact" : {
+            "$ref" : "#/components/schemas/getAccountData_personalBankerContact"
+          },
+          "phone" : {
+            "type" : "number"
+          },
+          "postedBalance" : {
+            "type" : "number"
+          },
+          "principalBalance" : {
+            "type" : "string"
+          },
+          "productCode" : {
+            "type" : "string"
+          },
+          "productName" : {
+            "type" : "string"
+          },
+          "propertyAddress" : {
+            "type" : "string"
+          },
+          "rewardPoints" : {
+            "type" : "string"
+          },
+          "routingNumber" : {
+            "type" : "string"
+          },
+          "statementDate" : {
+            "type" : "string"
+          },
+          "status" : {
+            "type" : "string"
+          },
+          "swiftCode" : {
+            "type" : "string",
+            "description" : "IDFC specific"
+          },
+          "totalBalance" : {
+            "type" : "number"
+          },
+          "unbilledAmount" : {
+            "type" : "number"
+          },
+          "userId" : {
+            "type" : "string"
+          },
+          "valueAtMaturity" : {
+            "type" : "number"
+          },
+          "holdAmount" : {
+            "type" : "number"
+          },
+          "unclearFundsAmount" : {
+            "type" : "number"
+          },
+          "averageMonthlyBalance" : {
+            "type" : "number"
+          },
+          "netWithdrawableBalance" : {
+            "type" : "number"
+          },
+          "totalTenure" : {
+            "type" : "string"
+          },
+          "remainingTenure" : {
+            "type" : "string"
+          },
+          "debitAccountNumber" : {
+            "type" : "string"
+          },
+          "lateFee" : {
+            "type" : "number"
+          },
+          "bounceCharge" : {
+            "type" : "number"
+          },
+          "totalCharges" : {
+            "type" : "number"
+          },
+          "overDueAmount" : {
+            "type" : "number"
+          },
+          "id" : {
+            "type" : "string"
+          }
+        }
+      },
+      "GetCustomerData_personalBanker" : {
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "mobileNumber" : {
+            "type" : "string"
+          }
+        }
+      },
+      "sbsupportedAccountsResponse_sub" : {
+        "type" : "object",
+        "properties" : {
+          "accountName" : {
+            "type" : "string",
+            "example" : "CD"
+          },
+          "accountNickname" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string",
+              "example" : ""
+            }
+          },
+          "id" : {
+            "type" : "string",
+            "example" : "3ecbd3c86c231832"
+          }
+        }
+      },
+      "GetTransactionsReq_transactionAmount" : {
+        "type" : "object",
+        "properties" : {
+          "amount1" : {
+            "type" : "number"
+          },
+          "amount" : {
+            "type" : "object",
+            "properties" : { }
+          },
+          "currency" : {
+            "type" : "string"
+          }
+        },
+        "description" : "here amount can be a number or object based on user utterance with same key 'amount'"
+      },
+      "GetTransactionsReq_category" : {
+        "type" : "object",
+        "properties" : {
+          "codeType" : {
+            "type" : "string",
+            "description" : "either MCC or TransactionCode"
+          },
+          "value" : {
+            "type" : "array",
+            "description" : "it is an array of arrays for MCC",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "source" : {
+            "type" : "string",
+            "description" : "usually - Internal"
+          }
+        }
+      },
+      "GetTransactionsRes_sub" : {
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number"
+          },
+          "transactionId" : {
+            "type" : "number"
+          },
+          "accountNumber" : {
+            "type" : "string"
+          },
+          "timestamp" : {
+            "type" : "number"
+          },
+          "amount" : {
+            "type" : "number"
+          },
+          "currency" : {
+            "type" : "string"
+          },
+          "debitOrCredit" : {
+            "type" : "string"
+          },
+          "description" : {
+            "type" : "string"
+          },
+          "paymentMode" : {
+            "type" : "string"
+          },
+          "DBANames" : {
+            "type" : "string"
+          },
+          "status" : {
+            "type" : "string"
+          },
+          "closingBalance" : {
+            "type" : "number"
+          },
+          "transacitonType" : {
+            "type" : "string"
+          },
+          "ACHCode" : {
+            "type" : "string"
+          },
+          "MCCCode" : {
+            "type" : "string"
+          },
+          "SICCode" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "address" : {
+            "type" : "string"
+          },
+          "street" : {
+            "type" : "string"
+          },
+          "city" : {
+            "type" : "string"
+          },
+          "state" : {
+            "type" : "string"
+          },
+          "zip" : {
+            "type" : "string"
+          },
+          "country" : {
+            "type" : "string"
+          },
+          "phoneNumber" : {
+            "type" : "number"
+          },
+          "metaInfo" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/MetaInfo"
+            }
+          }
+        }
+      },
+      "disputeRequest_transactionsData" : {
+        "required" : [ "reasonCode", "transactionId" ],
+        "type" : "object",
+        "properties" : {
+          "transactionId" : {
+            "type" : "number",
+            "example" : 12345
+          },
+          "reasonCode" : {
+            "type" : "string",
+            "description" : "CHRG-AMNT-MORE - expectedAmount, CHRG-MULTPLE-TIME - duplicateTxnId, CANCL-PURCH & CANCL-REC-CHRG - cancelledAt CANCl-RECV-GD-SERV - purchasedAt & cancelledAt, INDESC-GD-SERV - customerDescription, UIDENTF-CHRG - NA  codes requires the corresponding fields mapped to it",
+            "example" : "UIDENTF-CHRG"
+          }
+        }
+      },
+      "sbsupportedBillersResponse_sub" : {
+        "type" : "object",
+        "properties" : {
+          "BillerID" : {
+            "type" : "number",
+            "example" : 991630
+          },
+          "Category" : {
+            "type" : "string",
+            "example" : "Telecom"
+          },
+          "Name" : {
+            "type" : "string",
+            "example" : "verizon"
+          },
+          "eBillSupport" : {
+            "type" : "boolean",
+            "example" : true
+          },
+          "id" : {
+            "type" : "string",
+            "example" : "20f90cbb05be28c2"
+          }
+        }
+      },
+      "custAlertResponse_meta" : {
+        "type" : "object",
+        "properties" : {
+          "amount" : {
+            "type" : "number",
+            "example" : 5
+          },
+          "type" : {
+            "type" : "string",
+            "example" : "lte"
+          },
+          "noOfDays" : {
+            "type" : "number",
+            "example" : 3
+          },
+          "country" : {
+            "type" : "string",
+            "example" : "USA"
+          }
+        }
+      },
+      "transferScheduleListResponse_sub" : {
+        "type" : "object",
+        "properties" : {
+          "Type" : {
+            "type" : "string"
+          },
+          "CustomerId" : {
+            "type" : "number"
+          },
+          "Amount" : {
+            "type" : "number"
+          },
+          "SourceAccountNumber" : {
+            "type" : "string"
+          },
+          "TargetAccountNumber" : {
+            "type" : "string"
+          },
+          "DueDate" : {
+            "type" : "string"
+          },
+          "InvoiceNumber" : {
+            "type" : "number"
+          },
+          "Currency" : {
+            "type" : "string"
+          },
+          "Status" : {
+            "type" : "string"
+          },
+          "ScheduledDate" : {
+            "type" : "number"
+          },
+          "NextScheduleDate" : {
+            "type" : "number"
+          },
+          "id" : {
+            "type" : "string"
+          }
+        }
+      },
+      "transferRecurringAddRequest_recurringOptions_frequency_duration" : {
+        "type" : "object",
+        "properties" : {
+          "untilStop" : {
+            "type" : "string"
+          },
+          "untilDate" : {
+            "type" : "number"
+          },
+          "numberOfTransfers" : {
+            "type" : "number"
+          }
+        }
+      },
+      "transferRecurringAddRequest_recurringOptions_frequency" : {
+        "type" : "object",
+        "properties" : {
+          "iterate" : {
+            "type" : "string"
+          },
+          "duration" : {
+            "$ref" : "#/components/schemas/transferRecurringAddRequest_recurringOptions_frequency_duration"
+          }
+        }
+      },
+      "transferRecurringAddRequest_recurringOptions" : {
+        "type" : "object",
+        "properties" : {
+          "amountType" : {
+            "type" : "string"
+          },
+          "frequency" : {
+            "$ref" : "#/components/schemas/transferRecurringAddRequest_recurringOptions_frequency"
+          }
+        }
+      },
+      "transferRecurringListResponse_sub_recurringOptions_frequency_duration" : {
+        "type" : "object",
+        "properties" : {
+          "untilStop" : {
+            "type" : "string"
+          },
+          "untilDate" : {
+            "type" : "string"
+          },
+          "numberOfPayments" : {
+            "type" : "string"
+          }
+        }
+      },
+      "transferRecurringListResponse_sub_recurringOptions_frequency" : {
+        "type" : "object",
+        "properties" : {
+          "duration" : {
+            "$ref" : "#/components/schemas/transferRecurringListResponse_sub_recurringOptions_frequency_duration"
+          },
+          "iterate" : {
+            "type" : "string"
+          }
+        }
+      },
+      "transferRecurringListResponse_sub_recurringOptions" : {
+        "type" : "object",
+        "properties" : {
+          "amountType" : {
+            "type" : "string"
+          },
+          "frequency" : {
+            "$ref" : "#/components/schemas/transferRecurringListResponse_sub_recurringOptions_frequency"
+          }
+        }
+      },
+      "transferRecurringListResponse_sub" : {
+        "type" : "object",
+        "properties" : {
+          "Type" : {
+            "type" : "string"
+          },
+          "CustomerId" : {
+            "type" : "number"
+          },
+          "Amount" : {
+            "type" : "number"
+          },
+          "SourceAccountNumber" : {
+            "type" : "string"
+          },
+          "TargetAccountNumber" : {
+            "type" : "string"
+          },
+          "DueDate" : {
+            "type" : "string"
+          },
+          "Currency" : {
+            "type" : "string"
+          },
+          "Status" : {
+            "type" : "string"
+          },
+          "ScheduledDate" : {
+            "type" : "number"
+          },
+          "recurringOptions" : {
+            "$ref" : "#/components/schemas/transferRecurringListResponse_sub_recurringOptions"
+          },
+          "id" : {
+            "type" : "string"
+          }
+        }
+      },
+      "transferRecurringUpdateRequest_recurringOptions_frequency" : {
+        "type" : "object",
+        "properties" : {
+          "duration" : {
+            "$ref" : "#/components/schemas/transferRecurringAddRequest_recurringOptions_frequency_duration"
+          },
+          "iterate" : {
+            "type" : "string"
+          }
+        }
+      },
+      "transferRecurringUpdateRequest_recurringOptions" : {
+        "type" : "object",
+        "properties" : {
+          "amountType" : {
+            "type" : "string"
+          },
+          "frequency" : {
+            "$ref" : "#/components/schemas/transferRecurringUpdateRequest_recurringOptions_frequency"
+          },
+          "updateTransferType" : {
+            "type" : "string"
+          }
+        }
+      },
+      "CCListResponse_sub" : {
+        "type" : "object",
+        "properties" : {
+          "Type" : {
+            "type" : "string"
+          },
+          "CustomerId" : {
+            "type" : "number"
+          },
+          "Amount" : {
+            "type" : "number"
+          },
+          "SourceAccountNumber" : {
+            "type" : "string"
+          },
+          "TargetAccountNumber" : {
+            "type" : "string"
+          },
+          "DueDate" : {
+            "type" : "string"
+          },
+          "Currency" : {
+            "type" : "string"
+          },
+          "Status" : {
+            "type" : "string"
+          },
+          "id" : {
+            "type" : "string"
+          }
+        }
+      },
+      "postbudgetResponse_category_value" : {
+        "type" : "object",
+        "properties" : {
+          "MCCCode" : {
+            "type" : "number",
+            "description" : "it can also be an object MCC  { $gte - 1520 , $lte - 1799",
+            "example" : 780
+          }
+        }
+      },
+      "postbudgetResponse_category_obj" : {
+        "type" : "object",
+        "properties" : {
+          "codeType" : {
+            "type" : "string",
+            "example" : "MCC"
+          },
+          "value" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/postbudgetResponse_category_value"
+            }
+          },
+          "source" : {
+            "type" : "string",
+            "example" : "Internal"
+          }
+        }
+      },
+      "postbudgetResponse_category" : {
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string",
+            "example" : "Home"
+          },
+          "obj" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/postbudgetResponse_category_obj"
+            }
+          }
+        }
+      },
+      "putBudgetRequest_budgetAmount" : {
+        "type" : "object",
+        "properties" : {
+          "value" : {
+            "type" : "number",
+            "example" : 5
+          },
+          "currency" : {
+            "type" : "string",
+            "example" : "USD"
+          }
+        }
+      },
+      "addBudgetRequest_budgetAmount" : {
+        "type" : "object",
+        "properties" : {
+          "amount" : {
+            "type" : "number",
+            "example" : 5
+          },
+          "currency" : {
+            "type" : "string",
+            "example" : "USD"
+          }
+        }
+      },
+      "addBudgetRequest_category_obj" : {
+        "type" : "object",
+        "properties" : {
+          "codeType" : {
+            "type" : "string",
+            "example" : "TransactionCode"
+          },
+          "value" : {
+            "type" : "string",
+            "example" : "1004"
+          },
+          "source" : {
+            "type" : "string",
+            "example" : "Internal"
+          }
+        }
+      },
+      "addBudgetRequest_category" : {
+        "type" : "object",
+        "properties" : {
+          "name" : {
+            "type" : "string",
+            "example" : "Home"
+          },
+          "obj" : {
+            "$ref" : "#/components/schemas/addBudgetRequest_category_obj"
+          }
+        }
+      },
+      "addSavingsGoalsRequest_schedule_frequency" : {
+        "type" : "object",
+        "properties" : {
+          "iterate" : {
+            "type" : "string",
+            "example" : "Monthly"
+          },
+          "duration" : {
+            "type" : "string",
+            "example" : "until 05/20/2021"
+          },
+          "paymentEndDate" : {
+            "type" : "string",
+            "example" : "05/20/2020"
+          },
+          "numTimes" : {
+            "type" : "number",
+            "example" : 5
+          }
+        }
+      },
+      "addSavingsGoalsRequest_schedule" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string",
+            "example" : "Monthly"
+          },
+          "duration" : {
+            "type" : "string",
+            "example" : "Until Date"
+          },
+          "frequency" : {
+            "$ref" : "#/components/schemas/addSavingsGoalsRequest_schedule_frequency"
+          }
+        }
+      },
+      "addSavingsGoalsRequest_payment_paymentAmount" : {
+        "type" : "object",
+        "properties" : {
+          "currency" : {
+            "type" : "string",
+            "example" : "USD"
+          },
+          "amount" : {
+            "type" : "number",
+            "example" : 5
+          }
+        }
+      },
+      "addSavingsGoalsRequest_payment" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string",
+            "example" : "fixed"
+          },
+          "paymentAmount" : {
+            "$ref" : "#/components/schemas/addSavingsGoalsRequest_payment_paymentAmount"
+          }
+        }
+      },
+      "addSavingsGoalsRequest_targetAmount" : {
+        "type" : "object",
+        "properties" : {
+          "amount" : {
+            "type" : "number",
+            "example" : 3
+          },
+          "currency" : {
+            "type" : "string",
+            "example" : "USD"
+          }
+        }
+      },
+      "depositRequest_image" : {
+        "type" : "object",
+        "properties" : {
+          "frontImage" : {
+            "type" : "string",
+            "example" : "https://google.com"
+          },
+          "backImage" : {
+            "type" : "string",
+            "example" : "https://google.com"
+          }
+        }
+      },
+      "GetTransactionsReq_sort" : {
+        "type" : "object",
+        "properties" : {
+          "type" : {
+            "type" : "string",
+            "description" : "amount"
+          },
+          "value" : {
+            "type" : "string",
+            "description" : "gt or lt"
+          }
+        }
+      },
+      "locateProfileRequest" : {
+        "required" : [ "accountNumber", "customerId", "ssNumber", "ssnShort" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "string"
+          },
+          "ssNumber" : {
+            "type" : "string"
+          },
+          "ssnShort" : {
+            "type" : "string"
+          },
+          "accountNumber" : {
+            "type" : "string"
+          }
+        },
+        "description" : "ssNumber, ssnShort, accountNumber are custom types. Either customerId or ssNumber or ssnShort and accountNumber will be sent in the request."
+      },
+      "locateProfileResponse" : {
+        "type" : "object",
+        "properties" : {
+          "accountNumber" : {
+            "type" : "string"
+          },
+          "cardDetails" : {
+            "$ref" : "#/components/schemas/locateProfileResponse_cardDetails"
+          },
+          "personalQuestions" : {
+            "$ref" : "#/components/schemas/locateProfileResponse_personalQuestions"
+          },
+          "ssNumber" : {
+            "type" : "number"
+          },
+          "ssnShort" : {
+            "type" : "number"
+          },
+          "alternatePhoneNumber" : {
+            "type" : "number"
+          },
+          "customerId" : {
+            "type" : "string"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "identificationNumber" : {
+            "type" : "string"
+          },
+          "identificationType" : {
+            "type" : "string"
+          },
+          "image" : {
+            "type" : "string"
+          },
+          "isAlternateMobileNumber" : {
+            "type" : "boolean"
+          },
+          "isPrimaryMobileNumber" : {
+            "type" : "boolean"
+          },
+          "location" : {
+            "type" : "string"
+          },
+          "name" : {
+            "type" : "string"
+          },
+          "personalBanker" : {
+            "$ref" : "#/components/schemas/GetCustomerData_personalBanker"
+          },
+          "phone" : {
+            "type" : "number"
+          },
+          "securityQuestions" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          },
+          "segmentId" : {
+            "type" : "number"
+          },
+          "userId" : {
+            "type" : "string"
+          }
+        },
+        "example" : {
+          "accountNumber" : "1042345",
+          "alternatePhoneNumber" : 8765454323,
+          "cardDetails" : {
+            "cardNumber" : "1234456778901690",
+            "expiryDate" : "2025-01-01T00:00:00.000+0000",
+            "cvv" : "123",
+            "pin" : "1111"
+          },
+          "customerId" : 1045300,
+          "email" : "John@gmail.com",
+          "identificationNumber" : 0,
+          "identificationType" : "",
+          "image" : "",
+          "isAlternateMobileNumber" : false,
+          "isPrimaryMobileNumber" : true,
+          "location" : "223 main street , Orlando, Florida, 33221",
+          "name" : "John",
+          "personalBanker" : {
+            "name" : "William Smith",
+            "email" : "William.Smith@bank.com",
+            "mobileNumber" : "(904) 236-2345"
+          },
+          "personalQuestions" : {
+            "DOB" : "1999-05-05T00:00:00.000+0000",
+            "SSN" : 104531234,
+            "SecretPassword" : "Sam",
+            "LDAmount" : 100,
+            "AccNumber" : "1042345"
+          },
+          "phone" : 918806043830,
+          "securityQuestions" : [ {
+            "Q" : "What is the name of the Grade School that you attended?",
+            "A" : "DJHS"
+          }, {
+            "Q" : "What is the name of your childhood best friend?",
+            "A" : "Sam"
+          } ],
+          "segmentId" : 1,
+          "ssNumber" : 104531234,
+          "ssnShort" : 1234,
+          "userId" : "19ff1cd63a1be8ff"
+        }
+      },
+      "debitcardInfobody" : {
+        "required" : [ "customerId", "cvv", "debitCardNumber", "expiryDate", "pin" ],
+        "type" : "object",
+        "properties" : {
+          "debitCardNumber" : {
+            "type" : "string",
+            "example" : "1234456778901690"
+          },
+          "pin" : {
+            "type" : "string",
+            "example" : "1111"
+          },
+          "cvv" : {
+            "type" : "string",
+            "example" : "123"
+          },
+          "expiryDate" : {
+            "type" : "string",
+            "example" : "2025-01-01T00:00:00.000+0000"
+          },
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          }
+        }
+      },
+      "personalInfobody" : {
+        "required" : [ "customerId" ],
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "dob" : {
+            "type" : "string",
+            "example" : "1999-05-05T00:00:00.000+0000"
+          },
+          "ssn" : {
+            "type" : "number",
+            "example" : 104531234
+          },
+          "secrectPassword" : {
+            "type" : "string",
+            "example" : "Sam"
+          },
+          "AccNumber" : {
+            "type" : "string",
+            "example" : "1042345"
+          },
+          "lastDepositAmt" : {
+            "type" : "number",
+            "example" : 500
+          }
+        },
+        "description" : "any of these will be required. dob || ssn || secrectPassword || AccNumber || lastDepositAmt"
+      },
+      "locateProfileResponse_cardDetails" : {
+        "type" : "object",
+        "properties" : {
+          "cardNumber" : {
+            "type" : "string"
+          },
+          "expiryDate" : {
+            "type" : "string"
+          },
+          "cvv" : {
+            "type" : "string"
+          },
+          "pin" : {
+            "type" : "string"
+          }
+        }
+      },
+      "locateProfileResponse_personalQuestions" : {
+        "type" : "object",
+        "properties" : {
+          "DOB" : {
+            "type" : "string"
+          },
+          "SSN" : {
+            "type" : "number"
+          },
+          "SecretPassword" : {
+            "type" : "string"
+          },
+          "LDAmount" : {
+            "type" : "number"
+          },
+          "AccNumber" : {
+            "type" : "string"
+          }
+        }
+      },
+      "debitcarddetailsRequest" : {
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number",
+            "example" : 1045300
+          },
+          "DebitCardNumber" : {
+            "type" : "string",
+            "example" : "1234456778901690"
+          }
+        }
+      },
+      "debitcarddetailsResponse" : {
+        "type" : "object",
+        "properties" : {
+          "accounts" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/components/schemas/debitcard_accounts"
+            }
+          }
+        },
+        "example" : [ {
+          "customerId" : 1045300,
+          "accountName" : "Savings Account",
+          "accountNickname" : "Vacation Fund",
+          "accountNumber" : 1043693,
+          "accountType" : "Savings Account",
+          "status" : "active",
+          "currency" : "USD",
+          "availableBalance" : 2256.93,
+          "currentBalance" : 20,
+          "minimumBalance" : 1500,
+          "statementDate" : "",
+          "activatedDate" : "01-01-2011",
+          "deactivatedDate" : "",
+          "lastUpdated" : "01-07-2019",
+          "image" : "",
+          "dueDate" : "",
+          "expiryDate" : "",
+          "personalBankerName" : "William Smith",
+          "personalBankerContact" : {
+            "email" : "William.Smith@bank.com",
+            "mobileNumber" : "(904) 236-2345"
+          },
+          "maxTransactionLimit" : 400000,
+          "userID" : "19ff1cd63a1be8ff",
+          "cardType" : "Discover",
+          "cardName" : "Wells Fargo",
+          "P2PLimit" : 300,
+          "CardStatus" : "",
+          "routingNumber" : 122105159,
+          "availableCashLimit" : 500,
+          "loanOriginationDate" : "",
+          "propertyAddress" : "",
+          "lastDrawDate" : "",
+          "productName" : "\"Boost Savings\"",
+          "productCode" : "MS02",
+          "loanMaturityDate" : "",
+          "location" : "172 W Flagler Street, Miami, Florida, 33130",
+          "email" : "test12@gmail.com",
+          "fdType" : "Short Term",
+          "phone" : 14085040880,
+          "expDate" : "",
+          "maturityDate" : "",
+          "internalTransferFromEnabled" : true,
+          "internalTransferToEnabled" : true,
+          "p2pEnabled" : true,
+          "paybillEnabled" : true,
+          "swiftCode" : "",
+          "branchName" : "",
+          "bankName" : "",
+          "isStatement" : false,
+          "isPrimaryMobileNumber" : false,
+          "isAlternateMobileNumber" : false,
+          "totalTenure" : "4",
+          "remainingTenure" : "1",
+          "debitAccountNumber" : "12345678",
+          "lateFee" : 10,
+          "bounceCharge" : 20,
+          "totalCharges" : 30,
+          "overDueAmount" : 15,
+          "id" : "34e3a9668a390a1a"
+        } ]
+      },
+      "debitcard_accounts" : {
+        "type" : "object",
+        "properties" : {
+          "customerId" : {
+            "type" : "number"
+          },
+          "accountName" : {
+            "type" : "string"
+          },
+          "accountNickname" : {
+            "type" : "string"
+          },
+          "accountNumber" : {
+            "type" : "string"
+          },
+          "accountType" : {
+            "type" : "string"
+          },
+          "activatedDate" : {
+            "type" : "string"
+          },
+          "availableBalance" : {
+            "type" : "number"
+          },
+          "availableCash" : {
+            "type" : "number"
+          },
+          "availableCashLimit" : {
+            "type" : "number"
+          },
+          "availableCredit" : {
+            "type" : "number"
+          },
+          "bankName" : {
+            "type" : "string",
+            "description" : "IDFC specific"
+          },
+          "branchName" : {
+            "type" : "string",
+            "description" : "IDFC specific"
+          },
+          "cardName" : {
+            "type" : "string"
+          },
+          "cardNumber" : {
+            "type" : "string"
+          },
+          "cardStatus" : {
+            "type" : "string",
+            "description" : "This can be any of these active, frozen, expired or blocked"
+          },
+          "cardType" : {
+            "type" : "string"
+          },
+          "creditLimit" : {
+            "type" : "number"
+          },
+          "currency" : {
+            "type" : "string"
+          },
+          "currentBalance" : {
+            "type" : "number"
+          },
+          "deactivatedDate" : {
+            "type" : "string"
+          },
+          "dueAmount" : {
+            "type" : "number"
+          },
+          "dueDate" : {
+            "type" : "string"
+          },
+          "earlyWithdrawalPenalty" : {
+            "type" : "number"
+          },
+          "email" : {
+            "type" : "string"
+          },
+          "expiryDate" : {
+            "type" : "string"
+          },
+          "expDate" : {
+            "type" : "string",
+            "description" : "It will be a number format lets say expiry is Dec2021, 1221 will be its value."
+          },
+          "fdType" : {
+            "type" : "string",
+            "description" : "idfc specific can be short term,  re-investment, quarterly payout, monthly. payout."
+          },
+          "image" : {
+            "type" : "string"
+          },
+          "interestRate" : {
+            "type" : "number"
+          },
+          "internalTransferFromEnabled" : {
+            "type" : "boolean"
+          },
+          "internalTransferToEnabled" : {
+            "type" : "boolean"
+          },
+          "isPrimaryMobile" : {
+            "type" : "boolean"
+          },
+          "isAlternateMobileNumber" : {
+            "type" : "boolean"
+          },
+          "isStatement" : {
+            "type" : "boolean"
+          },
+          "lastDrawDate" : {
+            "type" : "string"
+          },
+          "loanMaturityDate" : {
+            "type" : "string"
+          },
+          "loanOriginationDate" : {
+            "type" : "string"
+          },
+          "location" : {
+            "type" : "string"
+          },
+          "lastUpdated" : {
+            "type" : "string"
+          },
+          "maxTransactionLimit" : {
+            "type" : "string"
+          },
+          "maturityDate" : {
+            "type" : "string",
+            "description" : "its a date format"
+          },
+          "minimumPaymentDue" : {
+            "type" : "string"
+          },
+          "minimumBalance" : {
+            "type" : "string"
+          },
+          "monthlyPayment" : {
+            "type" : "number"
+          },
+          "openingBalance" : {
+            "type" : "number"
+          },
+          "originalLoanAmount" : {
+            "type" : "number"
+          },
+          "P2PLimit" : {
+            "type" : "number"
+          },
+          "p2pEnabled" : {
+            "type" : "number"
+          },
+          "paybillEnabled" : {
+            "type" : "boolean"
+          },
+          "payoffAmount" : {
+            "type" : "number"
+          },
+          "personalBankerName" : {
+            "type" : "string"
+          },
+          "personalBankerContact" : {
+            "$ref" : "#/components/schemas/getAccountData_personalBankerContact"
+          },
+          "phone" : {
+            "type" : "number"
+          },
+          "postedBalance" : {
+            "type" : "number"
+          },
+          "principalBalance" : {
+            "type" : "string"
+          },
+          "productCode" : {
+            "type" : "string"
+          },
+          "productName" : {
+            "type" : "string"
+          },
+          "propertyAddress" : {
+            "type" : "string"
+          },
+          "rewardPoints" : {
+            "type" : "string"
+          },
+          "routingNumber" : {
+            "type" : "string"
+          },
+          "statementDate" : {
+            "type" : "string"
+          },
+          "status" : {
+            "type" : "string"
+          },
+          "swiftCode" : {
+            "type" : "string",
+            "description" : "IDFC specific"
+          },
+          "totalBalance" : {
+            "type" : "number"
+          },
+          "unbilledAmount" : {
+            "type" : "number"
+          },
+          "userId" : {
+            "type" : "string"
+          },
+          "valueAtMaturity" : {
+            "type" : "number"
+          },
+          "holdAmount" : {
+            "type" : "number"
+          },
+          "unclearFundsAmount" : {
+            "type" : "number"
+          },
+          "averageMonthlyBalance" : {
+            "type" : "number"
+          },
+          "netWithdrawableBalance" : {
+            "type" : "number"
+          },
+          "totalTenure" : {
+            "type" : "string"
+          },
+          "remainingTenure" : {
+            "type" : "string"
+          },
+          "debitAccountNumber" : {
+            "type" : "string"
+          },
+          "lateFee" : {
+            "type" : "number"
+          },
+          "bounceCharge" : {
+            "type" : "number"
+          },
+          "totalCharges" : {
+            "type" : "number"
+          },
+          "overDueAmount" : {
+            "type" : "number"
+          },
+          "id" : {
+            "type" : "string"
+          }
+        }
+      }
+    },
+    "securitySchemes" : {
+      "bearerAuth" : {
+        "type" : "http",
+        "scheme" : "bearer",
+        "bearerFormat" : "JWT"
+      }
+    }
+  }
+}
