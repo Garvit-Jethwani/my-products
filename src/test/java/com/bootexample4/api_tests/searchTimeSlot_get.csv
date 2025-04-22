@@ -1,0 +1,11 @@
+addressId,subscriberId,associatedDocument,startDate,finishDate,orderType,addressChangeFlag,productType,priorityFlag,priorityReason
+17713,"VTAL001","VTT001","2021-05-21T13:00:00","2021-06-04T13:00:00","Instalacao",true,["Banda Larga"],true,"Cliente Diamond"
+28934,"VTAL002","VTT002","2021-05-22T09:30:00","2021-06-05T09:30:00","Retirada",false,["Banda Larga"],false,""
+39245,"VTAL003","VTT003","2021-05-23T11:45:00","2021-06-06T11:45:00","RemanejamentoPonto",false,["Banda Larga"],false,""
+41056,"VTAL004","VTT004","2021-05-24T14:15:00","2021-06-07T14:15:00","ChamadoTecnico",false,["Banda Larga"],true,"Problema crítico"
+52367,"VTAL005","VTT005","2021-05-25T16:00:00","2021-06-08T16:00:00","Instalacao",false,["Banda Larga"],false,""
+63578,"VTAL006","VTT006","2021-05-26T10:20:00","2021-06-09T10:20:00","Retirada",false,["Banda Larga"],false,""
+74689,"VTAL007","VTT007","2021-05-27T12:50:00","2021-06-10T12:50:00","RemanejamentoPonto",false,["Banda Larga"],false,""
+85790,"VTAL008","VTT008","2021-05-28T15:35:00","2021-06-11T15:35:00","ChamadoTecnico",false,["Banda Larga"],false,""
+96801,"VTAL009","VTT009","2021-05-29T08:10:00","2021-06-12T08:10:00","Instalacao",true,["Banda Larga"],false,""
+10912,"VTAL010","VTT010","2021-05-30T17:55:00","2021-06-13T17:55:00","Retirada",false,["Banda Larga"],false,""
