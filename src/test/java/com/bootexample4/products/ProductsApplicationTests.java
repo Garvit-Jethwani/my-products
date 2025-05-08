@@ -12,16 +12,16 @@ import com.bootexample4.products.repository.ProductRepository;
 class ProductsApplicationTests {
 
 	@Autowired
-    private ProductRepository productRepo;
+	private ProductRepository productRepo;
 
 	@Test
 	public void testCreate() {
-		Product p=new Product();
+		Product p = new Product();
 		p.setName("product-1");
 		p.setPrice(34.68);
 		p.setDescription("video game");
-		
-		TestMockServer.createExpectationForAddNewProduct(p,200,"127.0.0.1",3000);
+
+		TestMockServer.createExpectationForAddNewProduct(p, 200, "127.0.0.1", 3000);
 
 		// productRepo.save(p);
 		assertNotNull(productRepo.findById(1L).get());
